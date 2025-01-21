@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftwareByEugene</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background: #000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 200px;
+        }
+
+        nav {
+            background: #000;
+            display: flex;
+            align-items: center;
+            /* Align items vertically */
+            justify-content: left;
+            padding: 10px 20px;
+            /* Adds padding to the top, bottom, left, and right */
+        }
+
+        nav img {
+            height: 40px;
+            /* Ensure consistent height */
+            margin-right: 10px;
+            /* Add spacing between image and links */
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            line-height: 1;
+            /* Ensure text lines up properly */
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            background: url('clevercontacts/poster.png') no-repeat center center/cover;
+            height: 600px;
+        }
+
+        .hero h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .apps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background: #111;
+        }
+
+        .app {
+            background: #222;
+            margin: 20px;
+            width: 300px;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .app img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10%;
+        }
+
+        .download-badge {
+            width: 100px;
+            height: auto !important;
+            border-radius: 0;
+            /* Reset if needed or keep as is */
+            /* Optionally, add display: block; or other styling if required */
+        }
+
+        .app h3 {
+            margin: 15px 0;
+            font-size: 1.5em;
+        }
+
+        .app p {
+            font-size: 1em;
+            color: #ccc;
+        }
+
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="images/logo.png" alt="SoftwareByEugene Logo" height="40px" style="vertical-align: bottom;">
+        <a href="#">Home</a>
+        <a href="#apps">Apps</a>
+        <a href="mailto:support@softwarebyeugene.com">Contact</a>
+    </nav>
+    <div class="hero">
+        <h1>Welcome to SoftwareByEugene</h1>
+    </div>
+    <section id="apps" class="apps">
+        <div class="app">
+            <img src="clevercontacts/icon.png" alt="Clever Contacts">
+            <h3>Clever Contacts</h3>
+            <p>Be great with names.</p>
+            <a href="https://apps.apple.com/us/app/clever-contacts/id6670188409">
+                <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
+                    alt="Download on the App Store">
+            </a>
+        </div>
+        <div class="app">
+            <img src="mapcred/icon.png" alt="MapCred">
+            <h3>MapCred</h3>
+            <p>Visualize your life on a map.</p>
+            <a href="https://apps.apple.com/us/app/mapcred/id6444250747">
+                <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
+                    alt="Download on the App Store">
+            </a>
+        </div>
+        <div class="app">
+            <img src="cardswithphones/icon.png" alt="Cards with Phones">
+            <h3>Cards with Phones</h3>
+            <p>Play cards together anywhere.</p>
+            <a href="https://apps.apple.com/us/app/cards-with-phones/id1454757579">
+                <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
+                    alt="Download on the App Store">
+            </a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 SoftwareByEugene LLC. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
