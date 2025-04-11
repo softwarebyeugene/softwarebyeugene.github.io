@@ -1,0 +1,15 @@
+{
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "com.softwarebyeugene.Jigsaw" ],
+             "components": [
+               {
+                  "/": "/snapjigsaw/puzzle/*",
+                  "comment": "Matches any URL with a path that starts with /snapjigsaw/puzzle/."
+               }
+             ]
+           }
+       ]
+   }
+}
