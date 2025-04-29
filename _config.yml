@@ -1,3 +1,5 @@
 theme: jekyll-theme-minimal
 title: SoftwareByEugene
 description: The official home of SoftwareByEugene.
+include:
+  - .well-known
