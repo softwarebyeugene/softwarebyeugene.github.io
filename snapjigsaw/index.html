@@ -275,7 +275,7 @@
         <p class="app-subtitle">Transform Any Photo Into a Beautiful Jigsaw Puzzle</p>
         
         <div class="download-hero">
-            <a href="https://apps.apple.com/us/app/snap-jigsaw-real-art-puzzles/id6744262536">
+            <a href="https://apps.apple.com/app/apple-store/id6744262536?pt=250600&ct=website_snapjigsaw&mt=8">
                 <img class="download-badge" src="../images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png" alt="Download on the App Store">
             </a>
         </div>
@@ -336,19 +336,19 @@
         <section class="testimonials">
             <h2>⭐ What Players Say</h2>
             <div class="testimonial">
-                <div class="testimonial-text">"BEST puzzle app out there! The artwork is beautiful, the controls feel smooth, and I love that there are NO ads or distractions."</div>
+                <div class="testimonial-text">"BEST puzzle app out there! The artwork is beautiful, the controls feel smooth, and I love the clean, focused experience."</div>
                 <div class="testimonial-author">- ORkat, App Store Review</div>
             </div>
             <div class="testimonial">
-                <div class="testimonial-text">"So satisfying! Snap Jigsaw is pure puzzle joy—gorgeous pics, snappy pieces, and zero ads."</div>
+                <div class="testimonial-text">"So satisfying! Snap Jigsaw is pure puzzle joy—gorgeous pics, snappy pieces, and smooth gameplay."</div>
                 <div class="testimonial-author">- quixote5, App Store Review</div>
             </div>
         </section>
 
         <div class="cta-section">
             <h2>Ready to Start Puzzling?</h2>
-            <p>Free to play with optional $2.99 ad-free upgrade. Download Snap Jigsaw today!</p>
-            <a href="https://apps.apple.com/us/app/snap-jigsaw-real-art-puzzles/id6744262536">
+            <p>Download Snap Jigsaw and start creating beautiful puzzles today!</p>
+            <a href="https://apps.apple.com/app/apple-store/id6744262536?pt=250600&ct=website_snapjigsaw&mt=8">
                 <img class="download-badge" src="../images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png" alt="Download on the App Store">
             </a>
         </div>
@@ -391,11 +391,19 @@
             const appStoreLinks = document.querySelectorAll('a[href*="apps.apple.com"]');
             appStoreLinks.forEach(function(link, index) {
                 link.addEventListener('click', function() {
+                    // Determine button location for more detailed tracking
+                    const isHeroButton = link.closest('.download-hero') !== null;
+                    const isCtaButton = link.closest('.cta-section') !== null;
+                    const buttonLocation = isHeroButton ? 'hero' : (isCtaButton ? 'cta' : 'other');
+                    
                     if (typeof gtag !== 'undefined') {
                         gtag('event', 'app_store_click', {
                             'app_name': 'Snap Jigsaw',
-                            'page': 'landing_page',
-                            'position': index + 1
+                            'page': 'snapjigsaw_landing',
+                            'campaign_token': 'website_snapjigsaw',
+                            'button_location': buttonLocation,
+                            'position': index + 1,
+                            'has_campaign_tracking': true
                         });
                     }
                 });

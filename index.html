@@ -3,8 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>SoftwareByEugene - Premium iOS Apps for Productivity & Fun</title>
+    
+    <!-- iOS-specific meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SoftwareByEugene">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" href="images/logo.png">
     <meta name="description" content="Download premium iOS apps by SoftwareByEugene. Snap Jigsaw (3.1M puzzles), Clever Contacts (AI-powered contact management), MapCred & Cards with Phones.">
     
     <!-- iOS Smart App Banner -->
@@ -23,12 +30,21 @@
     <meta name="twitter:description" content="Download premium iOS apps including Snap Jigsaw with 3.1M photo puzzles and Clever Contacts for AI-powered contact management.">
     <meta name="twitter:image" content="https://softwarebyeugene.com/clevercontacts/poster.jpg">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #000;
             color: #fff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-overflow-scrolling: touch;
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
         }
 
         header {
@@ -45,96 +61,112 @@
             background: #000;
             display: flex;
             align-items: center;
-            /* Align items vertically */
-            justify-content: left;
-            padding: 10px 20px;
-            /* Adds padding to the top, bottom, left, and right */
+            justify-content: space-between;
+            padding: 15px 20px;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+        }
+        
+        .brand-text {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #fff;
         }
 
         nav img {
             height: 40px;
-            /* Ensure consistent height */
             margin-right: 10px;
-            /* Add spacing between image and links */
         }
 
-        nav a {
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
             color: #fff;
             margin: 0 15px;
             text-decoration: none;
-            font-size: 1.2em;
-            line-height: 1;
-            /* Ensure text lines up properly */
+            font-size: 1.1em;
+            transition: color 0.3s;
         }
 
-        .hero {
-            position: relative;
-            text-align: center;
+        .nav-links a:hover {
+            color: #007AFF;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+
+        .video-showcase {
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
-            height: 400px;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            padding: 40px 20px 60px 20px;
             text-align: center;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 600px;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        .hero h1 {
-            font-size: 3em;
-            margin: 0 0 10px 0;
+        .video-showcase h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
             color: #fff;
+            font-weight: 700;
         }
 
         .hero-subtitle {
-            font-size: 1.2em;
+            font-size: 1.3em;
             color: #ccc;
-            margin-bottom: 20px;
-        }
-
-        .hero-cta {
-            background: #007AFF;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1em;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: background 0.3s;
-        }
-
-        .hero-cta:hover {
-            background: #0056b3;
-        }
-
-        .video-showcase {
-            background: #000;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .video-showcase h2 {
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            color: #fff;
+            margin-bottom: 50px;
+            max-width: 600px;
+            line-height: 1.4;
         }
 
         .video-container {
             position: relative;
-            max-width: 600px;
+            max-width: 400px;
             margin: 0 auto;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            width: 90%;
         }
 
         #appVideo {
@@ -152,24 +184,34 @@
         }
 
         .indicator {
-            width: 12px;
-            height: 12px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.3);
             cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            min-height: 44px;
+            min-width: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .indicator::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
             transition: background 0.3s;
         }
 
-        .indicator.active {
+        .indicator.active::before {
             background: #007AFF;
         }
 
-        .video-title {
-            margin-top: 20px;
-            font-size: 1.2em;
-            color: #ccc;
-            font-weight: 500;
-        }
 
         .apps {
             display: flex;
@@ -238,10 +280,17 @@
             height: auto !important;
             border-radius: 8px;
             transition: transform 0.2s;
+            min-height: 44px;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .download-badge:hover {
             transform: scale(1.05);
+        }
+
+        .download-badge:active {
+            transform: scale(0.98);
         }
 
         .featured-badge {
@@ -265,92 +314,152 @@
             padding: 20px;
         }
 
-        /* Mobile Responsiveness */
+        /* Mobile Navigation */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2em;
+            .hamburger {
+                display: flex;
             }
-            
-            .hero-content {
-                margin: 0 20px;
-                padding: 20px;
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.95);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: right 0.3s ease;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 1.5rem;
+                margin: 1.5rem 0;
+                padding: 1rem;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                touch-action: manipulation;
             }
 
             .video-showcase {
-                padding: 40px 15px;
+                padding: 3rem 1rem;
+                min-height: 60vh;
             }
 
-            .video-showcase h2 {
-                font-size: 2em;
-                margin-bottom: 30px;
+            .video-showcase h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+                line-height: 1.4;
+                margin-bottom: 2rem;
             }
 
             .video-container {
-                max-width: 90%;
+                width: 95%;
+                max-width: none;
+            }
+
+            .video-indicators {
+                gap: 1rem;
+                margin-top: 2rem;
             }
             
             .apps {
                 flex-direction: column;
                 align-items: center;
+                padding: 2rem 1rem;
             }
             
             .app {
-                width: 90%;
-                max-width: 350px;
-                margin: 15px 0;
-            }
-            
-            nav {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            nav img {
-                margin-bottom: 10px;
+                width: 95%;
+                max-width: 380px;
+                margin: 1rem 0;
             }
         }
 
+        /* Small Mobile Devices */
         @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 1.8em;
+            .video-showcase {
+                padding: 2rem 0.5rem;
+                min-height: 50vh;
+            }
+
+            .video-showcase h1 {
+                font-size: 2rem;
             }
             
             .hero-subtitle {
-                font-size: 1em;
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .app {
+                width: 98%;
+                margin: 0.75rem 0;
+                padding: 1.5rem 1rem;
+            }
+
+            .download-badge {
+                width: 130px;
+            }
+        }
+
+        /* iPhone SE and very small screens */
+        @media (max-width: 375px) {
+            .video-showcase h1 {
+                font-size: 1.8rem;
             }
             
-            .hero-cta {
-                padding: 12px 25px;
-                font-size: 1em;
+            .hero-subtitle {
+                font-size: 0.9rem;
+                padding: 0 0.5rem;
+            }
+
+            .video-container {
+                width: 98%;
             }
         }
     </style>
 </head>
 
-<body>
+<body id="top">
     <nav>
-        <img src="images/logo.png" alt="SoftwareByEugene Logo" height="40px" style="vertical-align: bottom;">
-        <a href="#">Home</a>
-        <a href="#apps">Apps</a>
-        <a href="mailto:support@softwarebyeugene.com">Contact</a>
-    </nav>
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Apps That Spark Joy</h1>
-            <p class="hero-subtitle">Handcrafted iOS experiences by an indie developer who loves building fun, useful tools</p>
-            <a href="#apps" class="hero-cta">Explore Our Apps</a>
+        <div class="nav-brand">
+            <img src="images/logo.png" alt="SoftwareByEugene Logo">
+            <span class="brand-text">SoftwareByEugene</span>
         </div>
-    </div>
-    
+        <ul class="nav-links">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#apps">Apps</a></li>
+            <li><a href="mailto:support@softwarebyeugene.com">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
     <section class="video-showcase">
-        <h2>See Our Apps in Action</h2>
+        <h1>Apps That Spark Joy</h1>
+        <p class="hero-subtitle">Handcrafted iOS experiences by an indie developer who loves building fun, useful tools</p>
         <div class="video-container">
             <video id="appVideo" autoplay muted playsinline>
                 <source src="videos/SnapJigsawBeach_00.10.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-        <div class="video-title" id="videoTitle">Snap Jigsaw - Beach Scene</div>
         <div class="video-indicators">
             <div class="indicator active" data-video="0"></div>
             <div class="indicator" data-video="1"></div>
@@ -369,7 +478,7 @@
             <div class="app-stats">3.1M+ Photo Puzzles • 4 Reviews</div>
             <p>Over 3.1 million real art puzzles with smooth 60fps animations. Create puzzles from your photos or compete with friends on Game Center leaderboards.</p>
             <div class="download-container">
-                <a href="https://apps.apple.com/us/app/snap-jigsaw-real-art-puzzles/id6744262536">
+                <a href="https://apps.apple.com/app/apple-store/id6744262536?pt=250600&ct=website_homepage&mt=8">
                     <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
                         alt="Download on the App Store">
                 </a>
@@ -384,6 +493,7 @@
             <div class="app-stats">AI-Powered • 6 Reviews</div>
             <p>AI assistant that understands plain English questions about your contacts. Auto-populates relationships from Gmail while keeping all data on your device.</p>
             <div class="download-container">
+                <!-- TODO: Add campaign tracking - create campaign in App Store Connect first -->
                 <a href="https://apps.apple.com/us/app/clever-contacts/id6670188409">
                     <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
                         alt="Download on the App Store">
@@ -399,6 +509,7 @@
             <div class="app-stats">Life Tracking • 13 Reviews</div>
             <p>Automatically track your daily movements and create personalized location heatmaps. Includes mini-games and Game Center leaderboards for location competition.</p>
             <div class="download-container">
+                <!-- TODO: Add campaign tracking - create campaign in App Store Connect first -->
                 <a href="https://apps.apple.com/us/app/mapcred/id6444250747">
                     <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
                         alt="Download on the App Store">
@@ -414,6 +525,7 @@
             <div class="app-stats">Multiplayer Gaming • 13 Reviews</div>
             <p>Play 7 classic card games with friends using local Bluetooth/WiFi. Support for up to 8 players with robot opponents and automatic scorekeeping.</p>
             <div class="download-container">
+                <!-- TODO: Add campaign tracking - create campaign in App Store Connect first -->
                 <a href="https://apps.apple.com/us/app/cards-with-phones/id1454757579">
                     <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
                         alt="Download on the App Store">
@@ -471,6 +583,40 @@
     }
     </script>
 
+    <!-- Mobile Navigation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                
+                // Prevent body scroll when menu is open
+                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+            });
+
+            // Close menu when clicking a link
+            navLinks.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+
     <!-- Video Carousel Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -491,14 +637,12 @@
 
             let currentVideoIndex = 0;
             const videoElement = document.getElementById('appVideo');
-            const videoTitle = document.getElementById('videoTitle');
             const indicators = document.querySelectorAll('.indicator');
 
             function loadVideo(index) {
                 if (index >= 0 && index < videos.length) {
                     currentVideoIndex = index;
                     videoElement.src = videos[index].src;
-                    videoTitle.textContent = videos[index].title;
                     
                     // Update indicators
                     indicators.forEach((indicator, i) => {
@@ -550,11 +694,20 @@
             const appStoreLinks = document.querySelectorAll('a[href*="apps.apple.com"]');
             appStoreLinks.forEach(function(link, index) {
                 link.addEventListener('click', function() {
-                    // Track conversion event
+                    // Get app name and determine source details
+                    const appElement = link.closest('.app');
+                    const appName = appElement ? appElement.querySelector('h3').textContent : 'Unknown';
+                    const linkUrl = new URL(link.href);
+                    const campaignToken = linkUrl.searchParams.get('ct') || 'no_campaign';
+                    
+                    // Track conversion event with enhanced details
                     if (typeof gtag !== 'undefined') {
                         gtag('event', 'app_store_click', {
-                            'app_name': link.closest('.app').querySelector('h3').textContent,
-                            'position': index + 1
+                            'app_name': appName,
+                            'page': 'homepage',
+                            'campaign_token': campaignToken,
+                            'position': index + 1,
+                            'has_campaign_tracking': campaignToken !== 'no_campaign'
                         });
                     }
                     
