@@ -161,12 +161,12 @@
 
         .video-container {
             position: relative;
-            max-width: 400px;
+            max-width: 350px;
             margin: 0 auto;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            width: 90%;
+            width: 85%;
         }
 
         #appVideo {
@@ -350,30 +350,31 @@
             }
 
             .video-showcase {
-                padding: 3rem 1rem;
-                min-height: 60vh;
+                padding: 1.5rem 1rem;
+                min-height: auto;
+                justify-content: flex-start;
             }
 
             .video-showcase h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
                 line-height: 1.2;
-                margin-bottom: 1rem;
+                margin-bottom: 0.5rem;
             }
 
             .hero-subtitle {
                 font-size: 1.1rem;
                 line-height: 1.4;
-                margin-bottom: 2rem;
+                margin-bottom: 1.5rem;
             }
 
             .video-container {
-                width: 95%;
-                max-width: none;
+                width: 80%;
+                max-width: 280px;
             }
 
             .video-indicators {
                 gap: 1rem;
-                margin-top: 2rem;
+                margin-top: 1rem;
             }
             
             .apps {
@@ -392,17 +393,18 @@
         /* Small Mobile Devices */
         @media (max-width: 480px) {
             .video-showcase {
-                padding: 2rem 0.5rem;
-                min-height: 50vh;
+                padding: 1rem 0.5rem;
+                min-height: auto;
+                justify-content: flex-start;
             }
 
             .video-showcase h1 {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
             
             .hero-subtitle {
                 font-size: 1rem;
-                margin-bottom: 1.5rem;
+                margin-bottom: 0.75rem;
             }
 
             .app {
@@ -419,16 +421,18 @@
         /* iPhone SE and very small screens */
         @media (max-width: 375px) {
             .video-showcase h1 {
-                font-size: 1.8rem;
+                font-size: 1.4rem;
             }
             
             .hero-subtitle {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
                 padding: 0 0.5rem;
+                margin-bottom: 0.5rem;
             }
 
             .video-container {
-                width: 98%;
+                width: 75%;
+                max-width: 250px;
             }
         }
     </style>
