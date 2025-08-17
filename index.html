@@ -70,8 +70,9 @@
         .hero {
             position: relative;
             text-align: center;
-            background: url('hero-mockup.jpg') no-repeat center center/cover;
-            height: 600px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            height: 400px;
+            overflow: hidden;
         }
 
         .hero-content {
@@ -113,6 +114,61 @@
 
         .hero-cta:hover {
             background: #0056b3;
+        }
+
+        .video-showcase {
+            background: #000;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .video-showcase h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        #appVideo {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+        }
+
+        .video-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .indicator.active {
+            background: #007AFF;
+        }
+
+        .video-title {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #ccc;
+            font-weight: 500;
         }
 
         .apps {
@@ -219,6 +275,19 @@
                 margin: 0 20px;
                 padding: 20px;
             }
+
+            .video-showcase {
+                padding: 40px 15px;
+            }
+
+            .video-showcase h2 {
+                font-size: 2em;
+                margin-bottom: 30px;
+            }
+
+            .video-container {
+                max-width: 90%;
+            }
             
             .apps {
                 flex-direction: column;
@@ -272,6 +341,23 @@
             <a href="#apps" class="hero-cta">Explore Our Apps</a>
         </div>
     </div>
+    
+    <section class="video-showcase">
+        <h2>See Our Apps in Action</h2>
+        <div class="video-container">
+            <video id="appVideo" autoplay muted playsinline>
+                <source src="videos/SnapJigsawBeach_00.10.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-title" id="videoTitle">Snap Jigsaw - Beach Scene</div>
+        <div class="video-indicators">
+            <div class="indicator active" data-video="0"></div>
+            <div class="indicator" data-video="1"></div>
+            <div class="indicator" data-video="2"></div>
+        </div>
+    </section>
+    
     <section id="apps" class="apps">
         <div class="app">
             <div class="featured-badge">🔥 MOST POPULAR</div>
@@ -383,6 +469,78 @@
             }
         ]
     }
+    </script>
+
+    <!-- Video Carousel Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = [
+                {
+                    src: 'videos/SnapJigsawBeach_00.10.mp4',
+                    title: 'Snap Jigsaw - Beach Scene'
+                },
+                {
+                    src: 'videos/SnapJigsawFall_portrait_00.20.mp4',
+                    title: 'Snap Jigsaw - Fall Portrait'
+                },
+                {
+                    src: 'videos/SnapJigsawKangaroo_00.08.mp4',
+                    title: 'Snap Jigsaw - Kangaroo'
+                }
+            ];
+
+            let currentVideoIndex = 0;
+            const videoElement = document.getElementById('appVideo');
+            const videoTitle = document.getElementById('videoTitle');
+            const indicators = document.querySelectorAll('.indicator');
+
+            function loadVideo(index) {
+                if (index >= 0 && index < videos.length) {
+                    currentVideoIndex = index;
+                    videoElement.src = videos[index].src;
+                    videoTitle.textContent = videos[index].title;
+                    
+                    // Update indicators
+                    indicators.forEach((indicator, i) => {
+                        indicator.classList.toggle('active', i === index);
+                    });
+
+                    videoElement.load();
+                    videoElement.play().catch(e => {
+                        console.log('Auto-play prevented:', e);
+                    });
+                }
+            }
+
+            function nextVideo() {
+                const nextIndex = (currentVideoIndex + 1) % videos.length;
+                loadVideo(nextIndex);
+            }
+
+            // Auto-advance when video ends
+            videoElement.addEventListener('ended', nextVideo);
+
+            // Click handlers for indicators
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    loadVideo(index);
+                });
+            });
+
+            // Handle video load errors
+            videoElement.addEventListener('error', function() {
+                console.log('Video load error, trying next video');
+                setTimeout(nextVideo, 1000);
+            });
+
+            // Preload next video for smoother transitions
+            videoElement.addEventListener('loadeddata', function() {
+                const nextIndex = (currentVideoIndex + 1) % videos.length;
+                const preloadVideo = document.createElement('video');
+                preloadVideo.src = videos[nextIndex].src;
+                preloadVideo.preload = 'metadata';
+            });
+        });
     </script>
 
     <!-- Analytics Tracking -->
