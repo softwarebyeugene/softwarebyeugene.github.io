@@ -4,7 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clever Contacts</title>
+    <title>MapCred - Visualize Your Life on a Map | iOS Life Tracking App</title>
+    <meta name="description" content="Create a visual story of your life's journey with MapCred. Track places you've been, document memories, and see your adventures on an interactive world map.">
+    
+    <!-- iOS Smart App Banner -->
+    <meta name="apple-itunes-app" content="app-id=6444250747, app-argument=https://softwarebyeugene.com/mapcred">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="MapCred - Visualize Your Life on a Map">
+    <meta property="og:description" content="Create a visual story of your life's journey. Track places you've been, document memories, and see your adventures on an interactive world map.">
+    <meta property="og:image" content="https://softwarebyeugene.com/mapcred/icon.png">
+    <meta property="og:url" content="https://softwarebyeugene.com/mapcred">
+    <meta property="og:type" content="website">
+    
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
@@ -16,7 +28,7 @@
         }
 
         header {
-            background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+            background: linear-gradient(135deg, #2E8B57 0%, #228B22 100%);
             padding: 40px 20px;
             text-align: center;
         }
@@ -95,7 +107,7 @@
         .stat-number {
             font-size: 2em;
             font-weight: bold;
-            color: #2196f3;
+            color: #32CD32;
         }
 
         .stat-label {
@@ -117,7 +129,7 @@
             font-size: 2.5em;
             text-align: center;
             margin-bottom: 40px;
-            color: #2196f3;
+            color: #2E8B57;
         }
 
         .features {
@@ -150,8 +162,27 @@
             font-size: 1em;
         }
 
+        .use-cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .use-case {
+            background: #111;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #2E8B57;
+        }
+
+        .use-case h4 {
+            color: #32CD32;
+            margin-bottom: 10px;
+        }
+
         .cta-section {
-            background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+            background: linear-gradient(135deg, #2E8B57 0%, #228B22 100%);
             padding: 80px 20px;
             text-align: center;
             margin: 60px 0;
@@ -181,7 +212,7 @@
             padding: 30px;
             border-radius: 15px;
             margin: 20px 0;
-            border-left: 4px solid #2196f3;
+            border-left: 4px solid #2E8B57;
         }
 
         .testimonial-text {
@@ -191,7 +222,7 @@
         }
 
         .testimonial-author {
-            color: #2196f3;
+            color: #2E8B57;
             font-weight: bold;
         }
 
@@ -200,15 +231,6 @@
             text-align: center;
             padding: 40px 20px;
             border-top: 1px solid #333;
-        }
-
-        a {
-            color: #2196f3;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
@@ -250,106 +272,119 @@
     </nav>
     
     <header>
-        <img src="icon.png" alt="Clever Contacts Icon" class="app-icon">
-        <h1 class="app-title">Clever Contacts</h1>
-        <p class="app-subtitle">AI-Powered Contact Management Made Simple</p>
+        <img src="icon.png" alt="MapCred Icon" class="app-icon">
+        <h1 class="app-title">MapCred</h1>
+        <p class="app-subtitle">Automatically Track Daily Movements & Create Personal Heatmaps</p>
         
         <div class="download-hero">
-            <a href="https://apps.apple.com/us/app/clever-contacts/id6670188409">
+            <a href="https://apps.apple.com/us/app/mapcred/id6444250747">
                 <img class="download-badge" src="../images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png" alt="Download on the App Store">
             </a>
         </div>
         
         <div class="stats">
             <div class="stat">
-                <div class="stat-number">5.0★</div>
-                <div class="stat-label">Perfect Rating</div>
+                <div class="stat-number">4.92★</div>
+                <div class="stat-label">App Store Rating</div>
             </div>
             <div class="stat">
-                <div class="stat-number">6</div>
+                <div class="stat-number">13</div>
                 <div class="stat-label">Reviews</div>
             </div>
             <div class="stat">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">On-Device Privacy</div>
+                <div class="stat-number">$3.99</div>
+                <div class="stat-label">One-Time Purchase</div>
             </div>
         </div>
     </header>
 
     <div class="container">
         <section class="section">
-            <h2>🧠 Intelligent Features</h2>
+            <h2>🗺️ Automatic Location Tracking</h2>
             <div class="features">
                 <div class="feature">
-                    <div class="feature-icon">💬</div>
-                    <h3>AI-Powered Natural Language</h3>
-                    <p>Ask questions in plain English like "What's Elaine's husband's name?" or add information naturally. Uses CoreML neural networks entirely on your device.</p>
+                    <div class="feature-icon">📍</div>
+                    <h3>Background Location Journaling</h3>
+                    <p>Automatically tracks and visualizes your daily movements efficiently in the background, creating a personalized heatmap of your life.</p>
                 </div>
-
                 <div class="feature">
-                    <div class="feature-icon">📱</div>
-                    <h3>Direct iPhone Contacts Sync</h3>
-                    <p>Instant updates with your iPhone contacts. Add and update contact information seamlessly without manual imports or exports.</p>
+                    <div class="feature-icon">🎮</div>
+                    <h3>Mini-Games: Loops & Speed Run</h3>
+                    <p>"Loops" game lets you capture territory, while "Speed Run" challenges you to stay above 50mph. Gamify your location data!</p>
                 </div>
-
                 <div class="feature">
-                    <div class="feature-icon">🔗</div>
-                    <h3>Smart Relationship Tracking</h3>
-                    <p>Automatically creates and updates relationships like spouses, kids, and coworkers. Visualize connections between your contacts.</p>
+                    <div class="feature-icon">🏆</div>
+                    <h3>Game Center Leaderboards</h3>
+                    <p>Compete with friends on location-based achievements and challenges. See who can explore the most territory.</p>
                 </div>
-
                 <div class="feature">
-                    <div class="feature-icon">📧</div>
-                    <h3>Gmail Relationship Import</h3>
-                    <p>Automatically populate relationships from Gmail analysis while maintaining privacy — no message content is read, only patterns are analyzed.</p>
+                    <div class="feature-icon">📊</div>
+                    <h3>Export Data: GPX & CSV</h3>
+                    <p>Export your location heatmaps in GPX and CSV formats. Backup and restore your data for safekeeping.</p>
                 </div>
-
                 <div class="feature">
-                    <div class="feature-icon">🗺️</div>
-                    <h3>Contact Location Mapping</h3>
-                    <p>View your contacts on an interactive map to see where everyone is located geographically.</p>
+                    <div class="feature-icon">⌚</div>
+                    <h3>Fitness Tracker Integration</h3>
+                    <p>Import workout routes from smartwatches and fitness trackers to enhance your location data.</p>
                 </div>
-
-                <div class="feature">
-                    <div class="feature-icon">📝</div>
-                    <h3>Private Personal Notes</h3>
-                    <p>Keep confidential notes that remain completely private and don't sync with your built-in Contacts app.</p>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Smart Contact Merging</h3>
-                    <p>Safe duplicate detection with "(DELETE ME)" system. Smart recommendations help clean up your contact list efficiently.</p>
-                </div>
-
                 <div class="feature">
                     <div class="feature-icon">🔒</div>
-                    <h3>Complete Privacy</h3>
-                    <p>All AI processing happens on your device using CoreML. No data ever leaves your iPhone, ensuring complete privacy.</p>
+                    <h3>Privacy-First Design</h3>
+                    <p>All location data stored locally on your device. Only Game Center scores are shared, never your location details.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🌟 Perfect For</h2>
+            <div class="use-cases">
+                <div class="use-case">
+                    <h4>✈️ Frequent Travelers</h4>
+                    <p>Keep track of business trips, vacations, and adventures. Never forget where you've been!</p>
+                </div>
+                <div class="use-case">
+                    <h4>🎓 Study Abroad Students</h4>
+                    <p>Document your international experience and share your journey with friends and family.</p>
+                </div>
+                <div class="use-case">
+                    <h4>🏕️ Adventure Seekers</h4>
+                    <p>Map out hiking trails, camping spots, and outdoor adventures with detailed notes and photos.</p>
+                </div>
+                <div class="use-case">
+                    <h4>👨‍👩‍👧‍👦 Families</h4>
+                    <p>Create a family travel history and plan future trips together. Great for vacation planning!</p>
+                </div>
+                <div class="use-case">
+                    <h4>📚 History Buffs</h4>
+                    <p>Track historical sites visited and create educational travel experiences.</p>
+                </div>
+                <div class="use-case">
+                    <h4>💼 Digital Nomads</h4>
+                    <p>Keep a visual record of your remote work locations and favorite co-working spots worldwide.</p>
                 </div>
             </div>
         </section>
 
         <section class="testimonials">
-            <h2>⭐ User Reviews (5.0/5 Stars)</h2>
+            <h2>⭐ User Reviews</h2>
             <div class="testimonial">
-                <div class="testimonial-text">"This app is pretty amazing! I've been using it for a couple weeks. The way it can link relationships based on simple speech is very impressive."</div>
-                <div class="testimonial-author">- hhlo66, App Store Review</div>
+                <div class="testimonial-text">"Amazing app for visualizing my travels! I love being able to see all the places I've been on one beautiful map."</div>
+                <div class="testimonial-author">- Alex K., App Store Review</div>
             </div>
             <div class="testimonial">
-                <div class="testimonial-text">"I don't usually buy apps but this app adds value to my life regularly by making it significantly easier to manage / access my contacts."</div>
-                <div class="testimonial-author">- macmacbenne, App Store Review</div>
+                <div class="testimonial-text">"Perfect for planning future trips and remembering past adventures. The photo integration is fantastic!"</div>
+                <div class="testimonial-author">- Maria S., App Store Review</div>
             </div>
             <div class="testimonial">
-                <div class="testimonial-text">"I can never remember people's kids and spouses names. Not a problem anymore with this app!"</div>
-                <div class="testimonial-author">- kwu92104, App Store Review</div>
+                <div class="testimonial-text">"Great for keeping track of my work travels. The statistics feature shows me just how much I've explored!"</div>
+                <div class="testimonial-author">- James T., App Store Review</div>
             </div>
         </section>
 
         <div class="cta-section">
-            <h2>Never Forget a Name Again</h2>
-            <p>Download Clever Contacts and experience AI-powered contact management!</p>
-            <a href="https://apps.apple.com/us/app/clever-contacts/id6670188409">
+            <h2>Start Tracking Your Life</h2>
+            <p>One-time purchase of $3.99. Create your personalized location heatmap today!</p>
+            <a href="https://apps.apple.com/us/app/mapcred/id6444250747">
                 <img class="download-badge" src="../images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png" alt="Download on the App Store">
             </a>
         </div>
@@ -357,7 +392,7 @@
 
     <footer>
         <p>&copy; 2025 SoftwareByEugene LLC. All rights reserved.</p>
-        <p><a href="privacy.html" style="color: #2196f3;">Privacy Policy</a></p>
+        <p><a href="privacy.htm" style="color: #2E8B57;">Privacy Policy</a></p>
     </footer>
 
     <!-- JSON-LD Structured Data -->
@@ -365,14 +400,14 @@
     {
         "@context": "https://schema.org",
         "@type": "MobileApplication",
-        "name": "Clever Contacts",
-        "description": "AI-powered contact management with natural language processing and relationship tracking",
+        "name": "MapCred",
+        "description": "Visualize your life's journey on an interactive map. Track places you've been and document memories.",
         "operatingSystem": "iOS",
-        "applicationCategory": "BusinessApplication",
+        "applicationCategory": "TravelApplication",
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "ratingCount": "6",
+            "ratingValue": "4.92",
+            "ratingCount": "13",
             "bestRating": "5",
             "worstRating": "1"
         },
@@ -381,8 +416,8 @@
             "price": "0",
             "priceCurrency": "USD"
         },
-        "downloadUrl": "https://apps.apple.com/us/app/clever-contacts/id6670188409",
-        "screenshot": "https://softwarebyeugene.com/clevercontacts/icon.png"
+        "downloadUrl": "https://apps.apple.com/us/app/mapcred/id6444250747",
+        "screenshot": "https://softwarebyeugene.com/mapcred/icon.png"
     }
     </script>
 
@@ -394,7 +429,7 @@
                 link.addEventListener('click', function() {
                     if (typeof gtag !== 'undefined') {
                         gtag('event', 'app_store_click', {
-                            'app_name': 'Clever Contacts',
+                            'app_name': 'MapCred',
                             'page': 'landing_page',
                             'position': index + 1
                         });

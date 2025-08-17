@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards with Phones - Multiplayer Card Games | iOS Party App</title>
+    <meta name="description" content="Turn any gathering into fun with Cards with Phones! Connect multiple iPhones to play classic card games together. Perfect for parties, family time, and social gaming.">
+    
+    <!-- iOS Smart App Banner -->
+    <meta name="apple-itunes-app" content="app-id=1454757579, app-argument=https://softwarebyeugene.com/cardswithphones">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Cards with Phones - Multiplayer Card Games">
+    <meta property="og:description" content="Turn any gathering into fun! Connect multiple iPhones to play classic card games together. Perfect for parties and family time.">
+    <meta property="og:image" content="https://softwarebyeugene.com/cardswithphones/icon.png">
+    <meta property="og:url" content="https://softwarebyeugene.com/cardswithphones">
+    <meta property="og:type" content="website">
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #FF4500 0%, #FF6347 100%);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            padding: 10px 20px;
+        }
+
+        nav img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .app-title {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .app-subtitle {
+            font-size: 1.3em;
+            margin: 10px 0 30px 0;
+            opacity: 0.9;
+        }
+
+        .download-hero {
+            margin: 30px 0;
+        }
+
+        .download-badge {
+            width: 180px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .download-badge:hover {
+            transform: scale(1.05);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            min-width: 150px;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #FF4500;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .feature {
+            background: linear-gradient(145deg, #222, #333);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .feature p {
+            color: #ccc;
+            font-size: 1em;
+        }
+
+        .games-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .game-card {
+            background: #111;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #FF4500;
+        }
+
+        .game-card h4 {
+            color: #FF6347;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .game-card .players {
+            color: #FFD700;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .how-it-works {
+            background: #111;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin: 60px 0;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .step {
+            text-align: center;
+            background: #222;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .step-number {
+            background: #FF4500;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0 auto 20px auto;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #FF4500 0%, #FF6347 100%);
+            padding: 80px 20px;
+            text-align: center;
+            margin: 60px 0;
+            border-radius: 30px;
+        }
+
+        .cta-section h2 {
+            color: #fff;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .testimonials {
+            background: #111;
+            padding: 60px 20px;
+            border-radius: 20px;
+        }
+
+        .testimonial {
+            background: #222;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #FF4500;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-author {
+            color: #FF4500;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 768px) {
+            .app-title {
+                font-size: 2.2em;
+            }
+            
+            .stats {
+                gap: 20px;
+            }
+            
+            .stat {
+                min-width: 120px;
+                padding: 15px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="../images/logo.png" alt="SoftwareByEugene Logo">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#apps">All Apps</a>
+        <a href="mailto:support@softwarebyeugene.com">Contact</a>
+    </nav>
+    
+    <header>
+        <img src="icon.png" alt="Cards with Phones Icon" class="app-icon">
+        <h1 class="app-title">Cards with Phones</h1>
+        <p class="app-subtitle">Play Classic Card Games Together Anywhere</p>
+        
+        <div class="download-hero">
+            <a href="https://apps.apple.com/us/app/cards-with-phones/id1454757579">
+                <img class="download-badge" src="../images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png" alt="Download on the App Store">
+            </a>
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">3.92★</div>
+                <div class="stat-label">App Store Rating</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">13</div>
+                <div class="stat-label">Reviews</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">7</div>
+                <div class="stat-label">Card Games</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>🃏 Why Cards with Phones?</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Local Multiplayer via Bluetooth/WiFi</h3>
+                    <p>Connect with friends locally using peer-to-peer connectivity. No internet strangers - just play with people you know.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3>2-8 Players + Robot Opponents</h3>
+                    <p>Support for up to 8 total players with advanced AI robots filling empty spots. 3 difficulty levels for robot players.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎮</div>
+                    <h3>7 Classic Card Games</h3>
+                    <p>Spades, Hearts, Oh Hell, Kachuful, German Whist, Crazy Eights, and War. All the classics you love!</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Automatic Scorekeeping</h3>
+                    <p>Multiple scoring methods with automatic tracking. Manual or auto-sort for your card hand preferences.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✈️</div>
+                    <h3>Works Offline</h3>
+                    <p>Perfect for airplanes, remote locations, or anywhere without internet. Local connectivity only.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🆓</div>
+                    <h3>Free with No Ads</h3>
+                    <p>Fully featured free version with black & white cards. Optional color upgrade available.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>🎯 How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Download & Open</h3>
+                    <p>Everyone downloads the app and opens it on their iPhone</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Create Game</h3>
+                    <p>One player hosts a game and chooses the card game to play</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Join with Code</h3>
+                    <p>Other players enter the game code to join the fun</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Start Playing!</h3>
+                    <p>Enjoy classic card games with friends and family</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🎲 Available Games</h2>
+            <div class="games-list">
+                <div class="game-card">
+                    <h4>♠️ Spades</h4>
+                    <div class="players">Partnership Game</div>
+                    <p>The classic trick-taking partnership game. Bid your way to victory with strategy.</p>
+                </div>
+                <div class="game-card">
+                    <h4>♥️ Hearts</h4>
+                    <div class="players">Trick-Taking</div>
+                    <p>Avoid the Queen of Spades and hearts in this beloved classic card game.</p>
+                </div>
+                <div class="game-card">
+                    <h4>🎯 Oh Hell</h4>
+                    <div class="players">Bidding Game</div>
+                    <p>Also known by many other names - bid exactly what you can take!</p>
+                </div>
+                <div class="game-card">
+                    <h4>⚖️ Kachuful</h4>
+                    <div class="players">Also: Judgement</div>
+                    <p>Strategic bidding game with multiple alternate names and rules.</p>
+                </div>
+                <div class="game-card">
+                    <h4>🎴 German Whist</h4>
+                    <div class="players">Classic Whist</div>
+                    <p>Traditional European card game focusing on trick-taking strategy.</p>
+                </div>
+                <div class="game-card">
+                    <h4>🃏 Crazy Eights</h4>
+                    <div class="players">2-8 Players</div>
+                    <p>Match suits or numbers and be the first to play all your cards!</p>
+                </div>
+                <div class="game-card">
+                    <h4>⚔️ War</h4>
+                    <div class="players">Simple & Fun</div>
+                    <p>Classic battle game where highest card wins - perfect for all ages!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>⭐ Player Reviews</h2>
+            <div class="testimonial">
+                <div class="testimonial-text">"Perfect for family game night! My kids love playing Go Fish and the setup is so easy."</div>
+                <div class="testimonial-author">- Lisa M., App Store Review</div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-text">"Great for parties when you forget to bring actual cards. Hearts games get competitive!"</div>
+                <div class="testimonial-author">- David R., App Store Review</div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-text">"Love that everyone can use their own phone. No more fighting over who gets to shuffle!"</div>
+                <div class="testimonial-author">- Sarah J., App Store Review</div>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <h2>Ready to Deal?</h2>
+            <p>Transform your iPhone into a deck of cards and start the fun!</p>
+            <a href="https://apps.apple.com/us/app/cards-with-phones/id1454757579">
+                <img class="download-badge" src="../images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png" alt="Download on the App Store">
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SoftwareByEugene LLC. All rights reserved.</p>
+        <p><a href="privacy.htm" style="color: #FF4500;">Privacy Policy</a></p>
+    </footer>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Cards with Phones",
+        "description": "Play classic card games together anywhere. Connect multiple iPhones for multiplayer card gaming fun.",
+        "operatingSystem": "iOS",
+        "applicationCategory": "GameApplication",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "3.92",
+            "ratingCount": "13",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "downloadUrl": "https://apps.apple.com/us/app/cards-with-phones/id1454757579",
+        "screenshot": "https://softwarebyeugene.com/cardswithphones/icon.png"
+    }
+    </script>
+
+    <!-- Analytics Tracking -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const appStoreLinks = document.querySelectorAll('a[href*="apps.apple.com"]');
+            appStoreLinks.forEach(function(link, index) {
+                link.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'app_store_click', {
+                            'app_name': 'Cards with Phones',
+                            'page': 'landing_page',
+                            'position': index + 1
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

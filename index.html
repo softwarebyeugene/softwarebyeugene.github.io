@@ -4,7 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoftwareByEugene</title>
+    <title>SoftwareByEugene - Premium iOS Apps for Productivity & Fun</title>
+    <meta name="description" content="Download premium iOS apps by SoftwareByEugene. Snap Jigsaw (3.1M puzzles), Clever Contacts (AI-powered contact management), MapCred & Cards with Phones.">
+    
+    <!-- iOS Smart App Banner -->
+    <meta name="apple-itunes-app" content="app-id=6744262536, app-argument=https://softwarebyeugene.com">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SoftwareByEugene - Premium iOS Apps">
+    <meta property="og:description" content="Download premium iOS apps including Snap Jigsaw with 3.1M photo puzzles and Clever Contacts for AI-powered contact management.">
+    <meta property="og:image" content="https://softwarebyeugene.com/clevercontacts/poster.jpg">
+    <meta property="og:url" content="https://softwarebyeugene.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SoftwareByEugene - Premium iOS Apps">
+    <meta name="twitter:description" content="Download premium iOS apps including Snap Jigsaw with 3.1M photo puzzles and Clever Contacts for AI-powered contact management.">
+    <meta name="twitter:image" content="https://softwarebyeugene.com/clevercontacts/poster.jpg">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -53,19 +70,49 @@
         .hero {
             position: relative;
             text-align: center;
-            background: url('clevercontacts/poster.jpg') no-repeat center center/cover;
+            background: url('hero-mockup.jpg') no-repeat center center/cover;
             height: 600px;
         }
 
-        .hero h1 {
+        .hero-content {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+        }
+
+        .hero h1 {
             font-size: 3em;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 10px;
+            margin: 0 0 10px 0;
+            color: #fff;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2em;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .hero-cta {
+            background: #007AFF;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .hero-cta:hover {
+            background: #0056b3;
         }
 
         .apps {
@@ -77,42 +124,136 @@
         }
 
         .app {
-            background: #222;
+            background: linear-gradient(145deg, #222, #333);
             margin: 20px;
-            width: 300px;
-            border-radius: 10px;
+            width: 320px;
+            border-radius: 15px;
             text-align: center;
-            padding: 20px;
+            padding: 25px 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
         }
 
-        .app img {
+        .app:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .app img.app-icon {
             width: 100px;
             height: 100px;
-            border-radius: 10%;
-        }
-
-        .download-badge {
-            width: 100px;
-            height: auto !important;
-            border-radius: 0;
-            /* Reset if needed or keep as is */
-            /* Optionally, add display: block; or other styling if required */
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .app h3 {
-            margin: 15px 0;
-            font-size: 1.5em;
+            margin: 15px 0 5px 0;
+            font-size: 1.6em;
+            color: #fff;
+        }
+
+        .app-rating {
+            color: #FFD700;
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+
+        .app-stats {
+            color: #4CAF50;
+            font-size: 0.9em;
+            margin: 5px 0;
+            font-weight: bold;
         }
 
         .app p {
             font-size: 1em;
             color: #ccc;
+            margin: 10px 0 20px 0;
+            line-height: 1.4;
+        }
+
+        .download-container {
+            margin-top: 20px;
+        }
+
+        .download-badge {
+            width: 140px;
+            height: auto !important;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .download-badge:hover {
+            transform: scale(1.05);
+        }
+
+        .featured-badge {
+            background: linear-gradient(45deg, #FF6B35, #F7931E);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         footer {
             background: #000;
             text-align: center;
             padding: 20px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero-content {
+                margin: 0 20px;
+                padding: 20px;
+            }
+            
+            .apps {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .app {
+                width: 90%;
+                max-width: 350px;
+                margin: 15px 0;
+            }
+            
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav img {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            
+            .hero-subtitle {
+                font-size: 1em;
+            }
+            
+            .hero-cta {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -125,49 +266,149 @@
         <a href="mailto:support@softwarebyeugene.com">Contact</a>
     </nav>
     <div class="hero">
-        <h1>Welcome to SoftwareByEugene</h1>
+        <div class="hero-content">
+            <h1>Apps That Spark Joy</h1>
+            <p class="hero-subtitle">Handcrafted iOS experiences by an indie developer who loves building fun, useful tools</p>
+            <a href="#apps" class="hero-cta">Explore Our Apps</a>
+        </div>
     </div>
     <section id="apps" class="apps">
         <div class="app">
-            <img src="snapjigsaw/icon.png" alt="Snap Jigsaw">
-            <h3>Snap Jigsaw</h3>
-            <p>3.1M Photo Puzzles to Play</p>
-            <a href="https://apps.apple.com/us/app/snap-jigsaw-real-art-puzzles/id6744262536">
-                <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
-                    alt="Download on the App Store">
+            <div class="featured-badge">🔥 MOST POPULAR</div>
+            <a href="snapjigsaw/index.html" style="text-decoration: none; color: inherit;">
+                <img src="snapjigsaw/icon.png" alt="Snap Jigsaw" class="app-icon">
+                <h3>Snap Jigsaw</h3>
             </a>
+            <div class="app-rating">⭐⭐⭐⭐⭐ 4.75/5</div>
+            <div class="app-stats">3.1M+ Photo Puzzles • 4 Reviews</div>
+            <p>Over 3.1 million real art puzzles with smooth 60fps animations. Create puzzles from your photos or compete with friends on Game Center leaderboards.</p>
+            <div class="download-container">
+                <a href="https://apps.apple.com/us/app/snap-jigsaw-real-art-puzzles/id6744262536">
+                    <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
+                        alt="Download on the App Store">
+                </a>
+            </div>
         </div>
         <div class="app">
-            <img src="clevercontacts/icon.png" alt="Clever Contacts">
-            <h3>Clever Contacts</h3>
-            <p>Be great with names.</p>
-            <a href="https://apps.apple.com/us/app/clever-contacts/id6670188409">
-                <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
-                    alt="Download on the App Store">
+            <a href="clevercontacts/index.html" style="text-decoration: none; color: inherit;">
+                <img src="clevercontacts/icon.png" alt="Clever Contacts" class="app-icon">
+                <h3>Clever Contacts</h3>
             </a>
+            <div class="app-rating">⭐⭐⭐⭐⭐ 5.0/5</div>
+            <div class="app-stats">AI-Powered • 6 Reviews</div>
+            <p>AI assistant that understands plain English questions about your contacts. Auto-populates relationships from Gmail while keeping all data on your device.</p>
+            <div class="download-container">
+                <a href="https://apps.apple.com/us/app/clever-contacts/id6670188409">
+                    <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
+                        alt="Download on the App Store">
+                </a>
+            </div>
         </div>
         <div class="app">
-            <img src="mapcred/icon.png" alt="MapCred">
-            <h3>MapCred</h3>
-            <p>Visualize your life on a map.</p>
-            <a href="https://apps.apple.com/us/app/mapcred/id6444250747">
-                <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
-                    alt="Download on the App Store">
+            <a href="mapcred/index.html" style="text-decoration: none; color: inherit;">
+                <img src="mapcred/icon.png" alt="MapCred" class="app-icon">
+                <h3>MapCred</h3>
             </a>
+            <div class="app-rating">⭐⭐⭐⭐⭐ 4.92/5</div>
+            <div class="app-stats">Life Tracking • 13 Reviews</div>
+            <p>Automatically track your daily movements and create personalized location heatmaps. Includes mini-games and Game Center leaderboards for location competition.</p>
+            <div class="download-container">
+                <a href="https://apps.apple.com/us/app/mapcred/id6444250747">
+                    <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
+                        alt="Download on the App Store">
+                </a>
+            </div>
         </div>
         <div class="app">
-            <img src="cardswithphones/icon.png" alt="Cards with Phones">
-            <h3>Cards with Phones</h3>
-            <p>Play cards together anywhere.</p>
-            <a href="https://apps.apple.com/us/app/cards-with-phones/id1454757579">
-                <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
-                    alt="Download on the App Store">
+            <a href="cardswithphones/index.html" style="text-decoration: none; color: inherit;">
+                <img src="cardswithphones/icon.png" alt="Cards with Phones" class="app-icon">
+                <h3>Cards with Phones</h3>
             </a>
+            <div class="app-rating">⭐⭐⭐⭐☆ 3.92/5</div>
+            <div class="app-stats">Multiplayer Gaming • 13 Reviews</div>
+            <p>Play 7 classic card games with friends using local Bluetooth/WiFi. Support for up to 8 players with robot opponents and automatic scorekeeping.</p>
+            <div class="download-container">
+                <a href="https://apps.apple.com/us/app/cards-with-phones/id1454757579">
+                    <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
+                        alt="Download on the App Store">
+                </a>
+            </div>
         </div>
     </section>
     <footer>
         <p>&copy; 2025 SoftwareByEugene LLC. All rights reserved.</p>
     </footer>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SoftwareByEugene LLC",
+        "url": "https://softwarebyeugene.com",
+        "logo": "https://softwarebyeugene.com/images/logo.png",
+        "description": "Premium iOS app developer creating innovative productivity and entertainment applications",
+        "mobileApplication": [
+            {
+                "@type": "MobileApplication",
+                "name": "Snap Jigsaw",
+                "operatingSystem": "iOS",
+                "applicationCategory": "GameApplication",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.75",
+                    "ratingCount": "4"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            },
+            {
+                "@type": "MobileApplication",
+                "name": "Clever Contacts",
+                "operatingSystem": "iOS",
+                "applicationCategory": "BusinessApplication",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5.0",
+                    "ratingCount": "6"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Analytics Tracking -->
+    <script>
+        // Track app store clicks for conversion measurement
+        document.addEventListener('DOMContentLoaded', function() {
+            const appStoreLinks = document.querySelectorAll('a[href*="apps.apple.com"]');
+            appStoreLinks.forEach(function(link, index) {
+                link.addEventListener('click', function() {
+                    // Track conversion event
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'app_store_click', {
+                            'app_name': link.closest('.app').querySelector('h3').textContent,
+                            'position': index + 1
+                        });
+                    }
+                    
+                    // Add slight delay to ensure tracking
+                    setTimeout(function() {
+                        window.open(link.href, '_blank');
+                    }, 100);
+                    return false;
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

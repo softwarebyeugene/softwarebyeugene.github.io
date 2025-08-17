@@ -4,7 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clever Contacts</title>
+    <title>Snap Jigsaw - 3.1M Photo Puzzles to Play | iOS App</title>
+    <meta name="description" content="Transform any photo into a beautiful jigsaw puzzle! Download Snap Jigsaw for iOS with 3.1M+ photo puzzles. Create puzzles from your own photos or explore millions of images.">
+    
+    <!-- iOS Smart App Banner -->
+    <meta name="apple-itunes-app" content="app-id=6744262536, app-argument=https://softwarebyeugene.com/snapjigsaw">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Snap Jigsaw - 3.1M Photo Puzzles">
+    <meta property="og:description" content="Transform any photo into a beautiful jigsaw puzzle! Create puzzles from your own photos or explore millions of images.">
+    <meta property="og:image" content="https://softwarebyeugene.com/snapjigsaw/icon.png">
+    <meta property="og:url" content="https://softwarebyeugene.com/snapjigsaw">
+    <meta property="og:type" content="website">
+    
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
@@ -16,7 +28,7 @@
         }
 
         header {
-            background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 40px 20px;
             text-align: center;
         }
@@ -95,7 +107,7 @@
         .stat-number {
             font-size: 2em;
             font-weight: bold;
-            color: #2196f3;
+            color: #FFD700;
         }
 
         .stat-label {
@@ -117,7 +129,7 @@
             font-size: 2.5em;
             text-align: center;
             margin-bottom: 40px;
-            color: #2196f3;
+            color: #667eea;
         }
 
         .features {
@@ -150,8 +162,25 @@
             font-size: 1em;
         }
 
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .screenshot {
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .screenshot:hover {
+            transform: translateY(-10px);
+        }
+
         .cta-section {
-            background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 80px 20px;
             text-align: center;
             margin: 60px 0;
@@ -181,7 +210,7 @@
             padding: 30px;
             border-radius: 15px;
             margin: 20px 0;
-            border-left: 4px solid #2196f3;
+            border-left: 4px solid #667eea;
         }
 
         .testimonial-text {
@@ -191,7 +220,7 @@
         }
 
         .testimonial-author {
-            color: #2196f3;
+            color: #667eea;
             font-weight: bold;
         }
 
@@ -200,15 +229,6 @@
             text-align: center;
             padding: 40px 20px;
             border-top: 1px solid #333;
-        }
-
-        a {
-            color: #2196f3;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
@@ -250,106 +270,85 @@
     </nav>
     
     <header>
-        <img src="icon.png" alt="Clever Contacts Icon" class="app-icon">
-        <h1 class="app-title">Clever Contacts</h1>
-        <p class="app-subtitle">AI-Powered Contact Management Made Simple</p>
+        <img src="icon.png" alt="Snap Jigsaw Icon" class="app-icon">
+        <h1 class="app-title">Snap Jigsaw</h1>
+        <p class="app-subtitle">Transform Any Photo Into a Beautiful Jigsaw Puzzle</p>
         
         <div class="download-hero">
-            <a href="https://apps.apple.com/us/app/clever-contacts/id6670188409">
+            <a href="https://apps.apple.com/us/app/snap-jigsaw-real-art-puzzles/id6744262536">
                 <img class="download-badge" src="../images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png" alt="Download on the App Store">
             </a>
         </div>
         
         <div class="stats">
             <div class="stat">
-                <div class="stat-number">5.0★</div>
-                <div class="stat-label">Perfect Rating</div>
+                <div class="stat-number">3.1M+</div>
+                <div class="stat-label">Photo Puzzles</div>
             </div>
             <div class="stat">
-                <div class="stat-number">6</div>
+                <div class="stat-number">4.75★</div>
+                <div class="stat-label">App Store Rating</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">4</div>
                 <div class="stat-label">Reviews</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">On-Device Privacy</div>
             </div>
         </div>
     </header>
 
     <div class="container">
         <section class="section">
-            <h2>🧠 Intelligent Features</h2>
+            <h2>🧩 Amazing Features</h2>
             <div class="features">
                 <div class="feature">
-                    <div class="feature-icon">💬</div>
-                    <h3>AI-Powered Natural Language</h3>
-                    <p>Ask questions in plain English like "What's Elaine's husband's name?" or add information naturally. Uses CoreML neural networks entirely on your device.</p>
+                    <div class="feature-icon">📸</div>
+                    <h3>Create From Your Photos</h3>
+                    <p>Turn your favorite memories into beautiful puzzles. Import photos from your camera roll and create personalized jigsaw experiences.</p>
                 </div>
-
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h3>3.1 Million Real Art Puzzles</h3>
+                    <p>All puzzles are human-created real artwork, not AI-generated. Stunning collection of high-quality images and beautiful scenes.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>25 to 1000 Pieces</h3>
+                    <p>Flexible difficulty range perfect for beginners and puzzle masters. Choose the challenge level that's right for you.</p>
+                </div>
                 <div class="feature">
                     <div class="feature-icon">📱</div>
-                    <h3>Direct iPhone Contacts Sync</h3>
-                    <p>Instant updates with your iPhone contacts. Add and update contact information seamlessly without manual imports or exports.</p>
+                    <h3>60fps Smooth Animation</h3>
+                    <p>Enjoy buttery-smooth puzzle piece movements with satisfying haptic feedback. Optimized for the best mobile experience.</p>
                 </div>
-
                 <div class="feature">
-                    <div class="feature-icon">🔗</div>
-                    <h3>Smart Relationship Tracking</h3>
-                    <p>Automatically creates and updates relationships like spouses, kids, and coworkers. Visualize connections between your contacts.</p>
+                    <div class="feature-icon">🏆</div>
+                    <h3>Game Center Leaderboards</h3>
+                    <p>Compete with friends and track your best times. Share puzzle links to race others on the same puzzle layout.</p>
                 </div>
-
                 <div class="feature">
-                    <div class="feature-icon">📧</div>
-                    <h3>Gmail Relationship Import</h3>
-                    <p>Automatically populate relationships from Gmail analysis while maintaining privacy — no message content is read, only patterns are analyzed.</p>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon">🗺️</div>
-                    <h3>Contact Location Mapping</h3>
-                    <p>View your contacts on an interactive map to see where everyone is located geographically.</p>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon">📝</div>
-                    <h3>Private Personal Notes</h3>
-                    <p>Keep confidential notes that remain completely private and don't sync with your built-in Contacts app.</p>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Smart Contact Merging</h3>
-                    <p>Safe duplicate detection with "(DELETE ME)" system. Smart recommendations help clean up your contact list efficiently.</p>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Complete Privacy</h3>
-                    <p>All AI processing happens on your device using CoreML. No data ever leaves your iPhone, ensuring complete privacy.</p>
+                    <div class="feature-icon">💾</div>
+                    <h3>Save as Wallpapers</h3>
+                    <p>Save your completed puzzles as beautiful wallpapers. Dark Mode and Dynamic Type support for accessibility.</p>
                 </div>
             </div>
         </section>
 
         <section class="testimonials">
-            <h2>⭐ User Reviews (5.0/5 Stars)</h2>
+            <h2>⭐ What Players Say</h2>
             <div class="testimonial">
-                <div class="testimonial-text">"This app is pretty amazing! I've been using it for a couple weeks. The way it can link relationships based on simple speech is very impressive."</div>
-                <div class="testimonial-author">- hhlo66, App Store Review</div>
+                <div class="testimonial-text">"BEST puzzle app out there! The artwork is beautiful, the controls feel smooth, and I love that there are NO ads or distractions."</div>
+                <div class="testimonial-author">- ORkat, App Store Review</div>
             </div>
             <div class="testimonial">
-                <div class="testimonial-text">"I don't usually buy apps but this app adds value to my life regularly by making it significantly easier to manage / access my contacts."</div>
-                <div class="testimonial-author">- macmacbenne, App Store Review</div>
-            </div>
-            <div class="testimonial">
-                <div class="testimonial-text">"I can never remember people's kids and spouses names. Not a problem anymore with this app!"</div>
-                <div class="testimonial-author">- kwu92104, App Store Review</div>
+                <div class="testimonial-text">"So satisfying! Snap Jigsaw is pure puzzle joy—gorgeous pics, snappy pieces, and zero ads."</div>
+                <div class="testimonial-author">- quixote5, App Store Review</div>
             </div>
         </section>
 
         <div class="cta-section">
-            <h2>Never Forget a Name Again</h2>
-            <p>Download Clever Contacts and experience AI-powered contact management!</p>
-            <a href="https://apps.apple.com/us/app/clever-contacts/id6670188409">
+            <h2>Ready to Start Puzzling?</h2>
+            <p>Free to play with optional $2.99 ad-free upgrade. Download Snap Jigsaw today!</p>
+            <a href="https://apps.apple.com/us/app/snap-jigsaw-real-art-puzzles/id6744262536">
                 <img class="download-badge" src="../images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png" alt="Download on the App Store">
             </a>
         </div>
@@ -357,7 +356,7 @@
 
     <footer>
         <p>&copy; 2025 SoftwareByEugene LLC. All rights reserved.</p>
-        <p><a href="privacy.html" style="color: #2196f3;">Privacy Policy</a></p>
+        <p><a href="privacy.html" style="color: #667eea;">Privacy Policy</a></p>
     </footer>
 
     <!-- JSON-LD Structured Data -->
@@ -365,14 +364,14 @@
     {
         "@context": "https://schema.org",
         "@type": "MobileApplication",
-        "name": "Clever Contacts",
-        "description": "AI-powered contact management with natural language processing and relationship tracking",
+        "name": "Snap Jigsaw",
+        "description": "Transform any photo into a beautiful jigsaw puzzle with 3.1M+ images to choose from",
         "operatingSystem": "iOS",
-        "applicationCategory": "BusinessApplication",
+        "applicationCategory": "GameApplication",
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "ratingCount": "6",
+            "ratingValue": "4.75",
+            "ratingCount": "4",
             "bestRating": "5",
             "worstRating": "1"
         },
@@ -381,8 +380,8 @@
             "price": "0",
             "priceCurrency": "USD"
         },
-        "downloadUrl": "https://apps.apple.com/us/app/clever-contacts/id6670188409",
-        "screenshot": "https://softwarebyeugene.com/clevercontacts/icon.png"
+        "downloadUrl": "https://apps.apple.com/us/app/snap-jigsaw-real-art-puzzles/id6744262536",
+        "screenshot": "https://softwarebyeugene.com/snapjigsaw/icon.png"
     }
     </script>
 
@@ -394,7 +393,7 @@
                 link.addEventListener('click', function() {
                     if (typeof gtag !== 'undefined') {
                         gtag('event', 'app_store_click', {
-                            'app_name': 'Clever Contacts',
+                            'app_name': 'Snap Jigsaw',
                             'page': 'landing_page',
                             'position': index + 1
                         });
