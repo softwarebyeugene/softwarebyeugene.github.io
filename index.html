@@ -167,6 +167,12 @@
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             width: 85%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .video-container:hover {
+            transform: scale(1.02);
         }
 
         #appVideo {
@@ -689,6 +695,23 @@
                 const preloadVideo = document.createElement('video');
                 preloadVideo.src = videos[nextIndex].src;
                 preloadVideo.preload = 'metadata';
+            });
+
+            // Add click handler to video container for Snap Jigsaw navigation
+            const videoContainer = document.querySelector('.video-container');
+            videoContainer.addEventListener('click', function() {
+                // Track the video click event
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'video_click', {
+                        'app_name': 'Snap Jigsaw',
+                        'page': 'homepage',
+                        'video_index': currentVideoIndex,
+                        'campaign_token': 'website_video_click'
+                    });
+                }
+                
+                // Navigate to Snap Jigsaw app store page
+                window.open('https://apps.apple.com/app/apple-store/id6744262536?pt=250600&ct=website_video_click&mt=8', '_blank');
             });
         });
     </script>
