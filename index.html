@@ -12,14 +12,14 @@
     <meta name="apple-mobile-web-app-title" content="SoftwareByEugene">
     <meta name="format-detection" content="telephone=no">
     <link rel="apple-touch-icon" href="images/logo.png">
-    <meta name="description" content="Download premium iOS apps by SoftwareByEugene. Snap Jigsaw (3.1M puzzles), Clever Contacts (AI-powered contact management), MapCred & Cards with Phones.">
+    <meta name="description" content="Handcrafted iOS apps by indie developer Eugene Lin. Games and utilities built with craftsmanship, privacy in mind, and clear monetization (free with ads or paid upgrades, depending on the app).">
     
     <!-- iOS Smart App Banner -->
     <meta name="apple-itunes-app" content="app-id=6744262536, app-argument=https://softwarebyeugene.com">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="SoftwareByEugene - Premium iOS Apps">
-    <meta property="og:description" content="Download premium iOS apps including Snap Jigsaw with 3.1M photo puzzles and Clever Contacts for AI-powered contact management.">
+    <meta property="og:description" content="Handcrafted iOS games and utilities by an independent iOS developer, with clear monetization and privacy-respecting design.">
     <meta property="og:image" content="https://softwarebyeugene.com/clevercontacts/poster.jpg">
     <meta property="og:url" content="https://softwarebyeugene.com">
     <meta property="og:type" content="website">
@@ -27,7 +27,7 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SoftwareByEugene - Premium iOS Apps">
-    <meta name="twitter:description" content="Download premium iOS apps including Snap Jigsaw with 3.1M photo puzzles and Clever Contacts for AI-powered contact management.">
+    <meta name="twitter:description" content="Handcrafted iOS games and utilities by an independent iOS developer, with clear monetization and privacy-respecting design.">
     <meta name="twitter:image" content="https://softwarebyeugene.com/clevercontacts/poster.jpg">
     <style>
         * {
@@ -132,92 +132,74 @@
             transform: rotate(45deg) translate(-5px, -6px);
         }
 
-
-        .video-showcase {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
-            padding: 40px 20px 60px 20px;
-            text-align: center;
-            min-height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .indie-sections {
+            background: #0b0b0b;
+            padding: 50px 20px 35px 20px;
         }
 
-        .video-showcase h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            color: #fff;
-            font-weight: 700;
-        }
-
-        .hero-subtitle {
-            font-size: 1.3em;
-            color: #ccc;
-            margin-bottom: 50px;
-            max-width: 600px;
-            line-height: 1.4;
-        }
-
-        .video-container {
-            position: relative;
-            max-width: 350px;
+        .indie-grid {
+            max-width: 1100px;
             margin: 0 auto;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            width: 85%;
-            cursor: pointer;
-            transition: transform 0.3s ease;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 24px;
         }
 
-        .video-container:hover {
-            transform: scale(1.02);
+        .indie-card {
+            background: linear-gradient(145deg, #202020, #2b2b2b);
+            border-radius: 16px;
+            padding: 26px 24px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
-        #appVideo {
+        .indie-card h2 {
+            margin-top: 0;
+            margin-bottom: 14px;
+            color: #fff;
+            font-size: 1.8em;
+        }
+
+        .indie-card p {
+            margin: 0 0 12px 0;
+            color: #d2d2d2;
+            line-height: 1.6;
+        }
+
+        .indie-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-photo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            float: right;
+            margin: 2px 0 12px 16px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+        }
+
+        .seattle-map-image {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+            margin: 2px 0 14px 0;
         }
 
-        .video-indicators {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 30px;
+        .principles-list {
+            margin: 0;
+            padding-left: 20px;
         }
 
-        .indicator {
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
-            min-height: 44px;
-            min-width: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            touch-action: manipulation;
-            -webkit-tap-highlight-color: transparent;
+        .principles-list li {
+            color: #ddd;
+            margin: 8px 0;
+            line-height: 1.4;
         }
-
-        .indicator::before {
-            content: '';
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transition: background 0.3s;
-        }
-
-        .indicator.active::before {
-            background: #007AFF;
-        }
-
 
         .apps {
             display: flex;
@@ -355,32 +337,19 @@
                 touch-action: manipulation;
             }
 
-            .video-showcase {
-                padding: 1.5rem 1rem;
-                min-height: auto;
-                justify-content: flex-start;
+            .indie-sections {
+                padding: 2rem 1rem 1.25rem 1rem;
             }
 
-            .video-showcase h1 {
-                font-size: 2.2rem;
-                line-height: 1.2;
-                margin-bottom: 0.5rem;
+            .indie-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
             }
 
-            .hero-subtitle {
-                font-size: 1.1rem;
-                line-height: 1.4;
-                margin-bottom: 1.5rem;
-            }
-
-            .video-container {
-                width: 80%;
-                max-width: 280px;
-            }
-
-            .video-indicators {
-                gap: 1rem;
-                margin-top: 1rem;
+            .about-photo {
+                float: none;
+                display: block;
+                margin: 0 auto 14px auto;
             }
             
             .apps {
@@ -398,21 +367,6 @@
 
         /* Small Mobile Devices */
         @media (max-width: 480px) {
-            .video-showcase {
-                padding: 1rem 0.5rem;
-                min-height: auto;
-                justify-content: flex-start;
-            }
-
-            .video-showcase h1 {
-                font-size: 1.6rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1rem;
-                margin-bottom: 0.75rem;
-            }
-
             .app {
                 width: 98%;
                 margin: 0.75rem 0;
@@ -426,19 +380,8 @@
 
         /* iPhone SE and very small screens */
         @media (max-width: 375px) {
-            .video-showcase h1 {
-                font-size: 1.4rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 0.85rem;
-                padding: 0 0.5rem;
-                margin-bottom: 0.5rem;
-            }
-
-            .video-container {
-                width: 75%;
-                max-width: 250px;
+            .indie-card h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -463,19 +406,24 @@
             <span></span>
         </div>
     </nav>
-    <section class="video-showcase">
-        <h1>Apps That Spark Joy</h1>
-        <p class="hero-subtitle">Handcrafted iOS experiences by an indie developer</p>
-        <div class="video-container">
-            <video id="appVideo" autoplay muted playsinline>
-                <source src="videos/SnapJigsawBeach_00.10.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="video-indicators">
-            <div class="indicator active" data-video="0"></div>
-            <div class="indicator" data-video="1"></div>
-            <div class="indicator" data-video="2"></div>
+    <section class="indie-sections">
+        <div class="indie-grid">
+            <div class="indie-card">
+                <h2>Hi. I'm Eugene.</h2>
+                <img src="images/eugene-profile.jpg" alt="Photo of Eugene Lin" class="about-photo">
+                <p>I'm Eugene Lin. When I was in fifth grade I convinced my parents to buy me an Apple IIc, and I learned to code so I could make games. A bit after that, I spent 20+ years at Microsoft and Meta designing and shipping all kinds of software, from world-class operating systems to game platforms to enterprise-grade productivity tools to billion-user messaging apps.</p>
+                <p>Now that I've shifted focus to my personal life, I've gotten back to my roots as an indie creator. I make apps for fun. I make apps for my little boy. I make apps for my friends. I make apps because I love it. And I'd love it if you gave any of them a try and let me know what you think.</p>
+            </div>
+            <div class="indie-card">
+                <h2>Made in Seattle</h2>
+                <img src="images/seattle-map.png" alt="Illustrated U.S. map with Seattle highlighted" class="seattle-map-image">
+                <ul class="principles-list">
+                    <li>Built on Mac. Designed by me.</li>
+                    <li>Code reviewed for privacy and security by Codex, Claude, and Gemini.</li>
+                    <li>Beautiful native iOS design, plus some fun.</li>
+                    <li>No personal data collection, no annoying ads.</li>
+                </ul>
+            </div>
         </div>
     </section>
     
@@ -486,9 +434,9 @@
                 <img src="snapjigsaw/icon.png" alt="Snap Jigsaw" class="app-icon">
                 <h3>Snap Jigsaw</h3>
             </a>
-            <div class="app-rating">⭐⭐⭐⭐⭐ 4.75/5</div>
-            <div class="app-stats">3.1M+ Photo Puzzles • 4 Reviews</div>
-            <p>Over 3.1 million real art puzzles with smooth 60fps animations. Create puzzles from your photos or compete with friends on Game Center leaderboards.</p>
+            <div class="app-rating">Photo Puzzle Studio</div>
+            <div class="app-stats">3.1M+ Photo Puzzles</div>
+            <p>Play 3.1 million real art puzzles for free. Create puzzles from your photos. Challenge friends for time with the same scramble. Compete for a top spot on Game Center leaderboards.</p>
             <div class="download-container">
                 <a href="https://apps.apple.com/app/apple-store/id6744262536?pt=250600&ct=website_homepage&mt=8">
                     <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
@@ -501,9 +449,9 @@
                 <img src="clevercontacts/icon.png" alt="Clever Contacts" class="app-icon">
                 <h3>Clever Contacts</h3>
             </a>
-            <div class="app-rating">⭐⭐⭐⭐⭐ 5.0/5</div>
-            <div class="app-stats">AI-Powered • 6 Reviews</div>
-            <p>AI assistant that understands plain English questions about your contacts. Auto-populates relationships from Gmail while keeping all data on your device.</p>
+            <div class="app-rating">AI Contact Assistant</div>
+            <div class="app-stats">AI-Powered Contact Management</div>
+            <p>A better contacts app for iPhone. Ask about your contacts in plain English ("What does Jimmy's dad do?"). Update contacts in plain English ("Alex Yarn lives at 123 Maple Lane").</p>
             <div class="download-container">
                 <!-- TODO: Add campaign tracking - create campaign in App Store Connect first -->
                 <a href="https://apps.apple.com/us/app/clever-contacts/id6670188409">
@@ -517,9 +465,9 @@
                 <img src="mapcred/mapcred-icon.png" alt="MapCred" class="app-icon">
                 <h3>MapCred</h3>
             </a>
-            <div class="app-rating">⭐⭐⭐⭐⭐ 4.92/5</div>
-            <div class="app-stats">Life Tracking • 13 Reviews</div>
-            <p>Automatically track your daily movements and create personalized location heatmaps. Includes mini-games and Game Center leaderboards for location competition.</p>
+            <div class="app-rating">Location Storytelling</div>
+            <div class="app-stats">Travel Tracking & Mini-Games</div>
+            <p>Get a personal heatmap of where you spent your time, automatically and privately! Includes mini-games and Game Center leaderboards to see who's most traveled.</p>
             <div class="download-container">
                 <!-- TODO: Add campaign tracking - create campaign in App Store Connect first -->
                 <a href="https://apps.apple.com/us/app/mapcred/id6444250747">
@@ -533,8 +481,8 @@
                 <img src="cardswithphones/icon.png" alt="Cards with Phones" class="app-icon">
                 <h3>Cards with Phones</h3>
             </a>
-            <div class="app-rating">⭐⭐⭐⭐☆ 3.92/5</div>
-            <div class="app-stats">Multiplayer Gaming • 13 Reviews</div>
+            <div class="app-rating">Classic Card Games</div>
+            <div class="app-stats">Local Multiplayer Gaming</div>
             <p>Play 7 classic card games with friends using local Bluetooth/WiFi. Support for up to 8 players with robot opponents and automatic scorekeeping.</p>
             <div class="download-container">
                 <!-- TODO: Add campaign tracking - create campaign in App Store Connect first -->
@@ -544,9 +492,25 @@
                 </a>
             </div>
         </div>
+        <div class="app">
+            <a href="ginrummy/index.html" style="text-decoration: none; color: inherit;">
+                <img src="ginrummy/icon.jpg" alt="Gin Rummy - Cardcraft" class="app-icon">
+                <h3>Gin Rummy - Cardcraft</h3>
+            </a>
+            <div class="app-rating">Serious Cards. Serious Opponents.</div>
+            <div class="app-stats">Offline AI • Nearby 2-Player</div>
+            <p>A modern Gin Rummy experience with distinct AI personalities, nearby multiplayer, smooth drag-to-play controls, and deep performance stats. No ads. No subscriptions. Free to play.</p>
+            <div class="download-container">
+                <a href="https://apps.apple.com/us/app/gin-rummy-cardcraft/id6759302684">
+                    <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
+                        alt="Download on the App Store">
+                </a>
+            </div>
+        </div>
     </section>
     <footer>
         <p>&copy; 2025 SoftwareByEugene LLC. All rights reserved.</p>
+        <p style="color: #a8a8a8; font-size: 0.92em;">If you enjoy these apps, ratings and reviews help a ton.</p>
     </footer>
 
     <!-- JSON-LD Structured Data -->
@@ -564,11 +528,6 @@
                 "name": "Snap Jigsaw",
                 "operatingSystem": "iOS",
                 "applicationCategory": "GameApplication",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.75",
-                    "ratingCount": "4"
-                },
                 "offers": {
                     "@type": "Offer",
                     "price": "0",
@@ -580,16 +539,18 @@
                 "name": "Clever Contacts",
                 "operatingSystem": "iOS",
                 "applicationCategory": "BusinessApplication",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "5.0",
-                    "ratingCount": "6"
-                },
                 "offers": {
                     "@type": "Offer",
                     "price": "0",
                     "priceCurrency": "USD"
                 }
+            },
+            {
+                "@type": "MobileApplication",
+                "name": "Gin Rummy - Cardcraft",
+                "operatingSystem": "iOS",
+                "applicationCategory": "GameApplication",
+                "url": "https://apps.apple.com/us/app/gin-rummy-cardcraft/id6759302684"
             }
         ]
     }
@@ -625,93 +586,6 @@
                     navLinks.classList.remove('active');
                     document.body.style.overflow = '';
                 }
-            });
-        });
-    </script>
-
-    <!-- Video Carousel Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const videos = [
-                {
-                    src: 'videos/SnapJigsawBeach_00.10.mp4',
-                    title: 'Snap Jigsaw - Beach Scene'
-                },
-                {
-                    src: 'videos/SnapJigsawFall_portrait_00.20.mp4',
-                    title: 'Snap Jigsaw - Fall Portrait'
-                },
-                {
-                    src: 'videos/SnapJigsawKangaroo_00.08.mp4',
-                    title: 'Snap Jigsaw - Kangaroo'
-                }
-            ];
-
-            let currentVideoIndex = 0;
-            const videoElement = document.getElementById('appVideo');
-            const indicators = document.querySelectorAll('.indicator');
-
-            function loadVideo(index) {
-                if (index >= 0 && index < videos.length) {
-                    currentVideoIndex = index;
-                    videoElement.src = videos[index].src;
-                    
-                    // Update indicators
-                    indicators.forEach((indicator, i) => {
-                        indicator.classList.toggle('active', i === index);
-                    });
-
-                    videoElement.load();
-                    videoElement.play().catch(e => {
-                        console.log('Auto-play prevented:', e);
-                    });
-                }
-            }
-
-            function nextVideo() {
-                const nextIndex = (currentVideoIndex + 1) % videos.length;
-                loadVideo(nextIndex);
-            }
-
-            // Auto-advance when video ends
-            videoElement.addEventListener('ended', nextVideo);
-
-            // Click handlers for indicators
-            indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', () => {
-                    loadVideo(index);
-                });
-            });
-
-            // Handle video load errors
-            videoElement.addEventListener('error', function() {
-                console.log('Video load error, trying next video');
-                setTimeout(nextVideo, 1000);
-            });
-
-            // Preload next video for smoother transitions
-            videoElement.addEventListener('loadeddata', function() {
-                const nextIndex = (currentVideoIndex + 1) % videos.length;
-                const preloadVideo = document.createElement('video');
-                preloadVideo.src = videos[nextIndex].src;
-                preloadVideo.preload = 'metadata';
-            });
-
-            // Add click handler to video container for Snap Jigsaw navigation
-            const videoContainer = document.querySelector('.video-container');
-            videoContainer.addEventListener('click', function() {
-                // Track the video click event
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'video_click', {
-                        'app_name': 'Snap Jigsaw',
-                        'page': 'homepage',
-                        'video_index': currentVideoIndex,
-                        'campaign_token': 'website_video_click'
-                    });
-                }
-                
-                // Navigate to Snap Jigsaw app store page
-                window.open('https://apps.apple.com/app/apple-store/id6744262536?pt=250600&ct=website_video_click&mt=8', '_blank');
             });
         });
     </script>

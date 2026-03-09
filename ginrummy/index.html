@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snap Jigsaw - 3.1M Photo Puzzles to Play | iOS App</title>
-    <meta name="description" content="Transform any photo into a beautiful jigsaw puzzle! Download Snap Jigsaw for iOS with 3.1M+ photo puzzles. Create puzzles from your own photos or explore millions of images.">
-    
+    <title>Gin Rummy - Cardcraft | iOS Card Game</title>
+    <meta name="description" content="Serious Cards. Serious Opponents. A modern take on Gin Rummy with offline AI personalities, nearby 2-player multiplayer, smooth controls, and deep stats.">
+
     <!-- iOS Smart App Banner -->
-    <meta name="apple-itunes-app" content="app-id=6744262536, app-argument=https://softwarebyeugene.com/snapjigsaw">
-    
+    <meta name="apple-itunes-app" content="app-id=6759302684, app-argument=https://softwarebyeugene.com/ginrummy">
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Snap Jigsaw - 3.1M Photo Puzzles">
-    <meta property="og:description" content="Transform any photo into a beautiful jigsaw puzzle! Create puzzles from your own photos or explore millions of images.">
-    <meta property="og:image" content="https://softwarebyeugene.com/snapjigsaw/icon.png">
-    <meta property="og:url" content="https://softwarebyeugene.com/snapjigsaw">
+    <meta property="og:title" content="Gin Rummy - Cardcraft">
+    <meta property="og:description" content="A beautifully modern take on Gin Rummy with offline AI personalities, nearby multiplayer, customization, and deep match stats.">
+    <meta property="og:image" content="https://softwarebyeugene.com/ginrummy/icon.jpg">
+    <meta property="og:url" content="https://softwarebyeugene.com/ginrummy">
     <meta property="og:type" content="website">
-    
+
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
@@ -28,7 +28,7 @@
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1f2340 0%, #0e1020 100%);
             padding: 40px 20px;
             text-align: center;
         }
@@ -70,7 +70,7 @@
         }
 
         .nav-links a:hover {
-            color: #667eea;
+            color: #7da7ff;
         }
 
         .hamburger {
@@ -119,7 +119,7 @@
         .app-subtitle {
             font-size: 1.3em;
             margin: 10px 0 30px 0;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         .download-hero {
@@ -140,7 +140,7 @@
         .stats {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 30px;
             margin: 30px 0;
             flex-wrap: wrap;
         }
@@ -150,18 +150,19 @@
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 15px;
-            min-width: 150px;
+            min-width: 160px;
         }
 
         .stat-number {
-            font-size: 2em;
+            font-size: 1.35em;
             font-weight: bold;
-            color: #FFD700;
+            color: #9ac0ff;
         }
 
         .stat-label {
             font-size: 0.9em;
-            opacity: 0.8;
+            opacity: 0.85;
+            margin-top: 6px;
         }
 
         .container {
@@ -175,61 +176,90 @@
         }
 
         .section h2 {
-            font-size: 2.5em;
+            font-size: 2.4em;
             text-align: center;
-            margin-bottom: 40px;
-            color: #667eea;
+            margin-bottom: 36px;
+            color: #9ac0ff;
+        }
+
+        .lead {
+            max-width: 860px;
+            margin: 0 auto 24px auto;
+            text-align: center;
+            color: #ddd;
+            font-size: 1.1em;
         }
 
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin: 40px 0;
-        }
-
-        .feature {
-            background: linear-gradient(145deg, #222, #333);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .feature-icon {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        .feature h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-
-        .feature p {
-            color: #ccc;
-            font-size: 1em;
-        }
-
-        .screenshots {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin: 40px 0;
         }
 
-        .screenshot {
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
+        .feature {
+            background: linear-gradient(145deg, #191d32, #131628);
+            padding: 28px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(125, 167, 255, 0.2);
         }
 
-        .screenshot:hover {
-            transform: translateY(-10px);
+        .feature h3 {
+            font-size: 1.3em;
+            margin: 0 0 12px 0;
+            color: #fff;
+        }
+
+        .feature p {
+            color: #d3d3d3;
+            margin: 0;
+        }
+
+        .quote {
+            background: #0f1221;
+            padding: 40px 24px;
+            border-radius: 20px;
+            border-left: 4px solid #7da7ff;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .quote p {
+            margin: 0;
+            font-size: 1.2em;
+            color: #e8e8e8;
+        }
+
+        .premium {
+            background: #0b0d1a;
+            padding: 50px 24px;
+            border-radius: 20px;
+            border: 1px solid rgba(125, 167, 255, 0.25);
+        }
+
+        .premium h2 {
+            margin-top: 0;
+        }
+
+        .premium-list {
+            list-style: none;
+            margin: 24px 0 0 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 14px;
+        }
+
+        .premium-list li {
+            background: #171b2f;
+            border-radius: 12px;
+            padding: 14px 16px;
+            color: #e5e5e5;
         }
 
         .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1f2340 0%, #101327 100%);
             padding: 80px 20px;
             text-align: center;
             margin: 60px 0;
@@ -245,32 +275,7 @@
         .cta-section p {
             font-size: 1.2em;
             margin-bottom: 40px;
-            opacity: 0.9;
-        }
-
-        .testimonials {
-            background: #111;
-            padding: 60px 20px;
-            border-radius: 20px;
-        }
-
-        .testimonial {
-            background: #222;
-            padding: 30px;
-            border-radius: 15px;
-            margin: 20px 0;
-            border-left: 4px solid #667eea;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-author {
-            color: #667eea;
-            font-weight: bold;
+            opacity: 0.95;
         }
 
         footer {
@@ -280,7 +285,6 @@
             border-top: 1px solid #333;
         }
 
-        /* Mobile Navigation */
         @media (max-width: 768px) {
             .hamburger {
                 display: flex;
@@ -318,16 +322,16 @@
             .app-title {
                 font-size: 2.2em;
             }
-            
+
             .stats {
                 gap: 20px;
             }
-            
+
             .stat {
                 min-width: 120px;
                 padding: 15px;
             }
-            
+
             .features {
                 grid-template-columns: 1fr;
             }
@@ -353,95 +357,111 @@
             <span></span>
         </div>
     </nav>
-    
+
     <header>
-        <img src="icon.png" alt="Snap Jigsaw Icon" class="app-icon">
-        <h1 class="app-title">Snap Jigsaw</h1>
-        <p class="app-subtitle">Transform Any Photo Into a Beautiful Jigsaw Puzzle</p>
-        
+        <img src="icon.jpg" alt="Gin Rummy - Cardcraft Icon" class="app-icon">
+        <h1 class="app-title">Gin Rummy - Cardcraft</h1>
+        <p class="app-subtitle">Serious Cards. Serious Opponents.</p>
+
         <div class="download-hero">
-            <a href="https://apps.apple.com/app/apple-store/id6744262536?pt=250600&ct=website_snapjigsaw&mt=8">
+            <a href="https://apps.apple.com/us/app/gin-rummy-cardcraft/id6759302684">
                 <img class="download-badge" src="../images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png" alt="Download on the App Store">
             </a>
         </div>
-        
+
         <div class="stats">
             <div class="stat">
-                <div class="stat-number">3.1M+</div>
-                <div class="stat-label">Photo Puzzles</div>
+                <div class="stat-number">Offline AI</div>
+                <div class="stat-label">Beginner to Expert personalities</div>
             </div>
             <div class="stat">
-                <div class="stat-number">25-1000</div>
-                <div class="stat-label">Puzzle Pieces</div>
+                <div class="stat-number">Nearby 2-Player</div>
+                <div class="stat-label">No internet required</div>
             </div>
             <div class="stat">
-                <div class="stat-number">Game Center</div>
-                <div class="stat-label">Leaderboards</div>
+                <div class="stat-number">Free + Premium</div>
+                <div class="stat-label">One-time premium upgrade</div>
             </div>
         </div>
     </header>
 
     <div class="container">
         <section class="section">
-            <h2>🧩 Amazing Features</h2>
+            <h2>Play Your Way</h2>
+            <p class="lead">A beautifully modern take on the classic Gin Rummy card game, designed for players who care about style, strategy, and smooth gameplay.</p>
             <div class="features">
                 <div class="feature">
-                    <div class="feature-icon">📸</div>
-                    <h3>Create From Your Photos</h3>
-                    <p>Turn your favorite memories into beautiful puzzles. Import photos from your camera roll and create personalized jigsaw experiences.</p>
+                    <h3>Distinct AI Personalities</h3>
+                    <p>Play offline against different opponent personalities from Beginner to Expert.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">🎨</div>
-                    <h3>3.1 Million Real Art Puzzles</h3>
-                    <p>All puzzles are human-created real artwork, not AI-generated. Stunning collection of high-quality images and beautiful scenes.</p>
+                    <h3>Cinematic Opponents</h3>
+                    <p>Challenge opponents with unique play styles and pattern-based decisions.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>25 to 1000 Pieces</h3>
-                    <p>Flexible difficulty range perfect for beginners and puzzle masters. Choose the challenge level that's right for you.</p>
+                    <h3>Nearby Multiplayer</h3>
+                    <p>Play nearby 2-player multiplayer with no internet required.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">📱</div>
-                    <h3>60fps Smooth Animation</h3>
-                    <p>Enjoy buttery-smooth puzzle piece movements with satisfying haptic feedback. Optimized for the best mobile experience.</p>
+                    <h3>Fast Controls</h3>
+                    <p>Use fluid drag-to-play controls with auto-arranged melds for effortless hand management.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Game Center Leaderboards</h3>
-                    <p>Compete with friends and track your best times. Share puzzle links to race others on the same puzzle layout.</p>
+                    <h3>Built-in Rules</h3>
+                    <p>Use integrated rules as a quick learning tool or refresher before matches.</p>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">💾</div>
-                    <h3>Save as Wallpapers</h3>
-                    <p>Save your completed puzzles as beautiful wallpapers. Dark Mode and Dynamic Type support for accessibility.</p>
+                    <h3>Custom Table Style</h3>
+                    <p>Personalize your table with premium card backs, elegant themes, and persistent preferences.</p>
                 </div>
             </div>
         </section>
 
-        <section class="testimonials">
-            <h2>What Players Say</h2>
-            <div class="testimonial">
-                <div class="testimonial-text">"BEST puzzle app out there! The artwork is beautiful, the controls feel smooth, and I love the clean, focused experience."</div>
-                <div class="testimonial-author">- ORkat, App Store Review</div>
+        <section class="quote">
+            <p>Every opponent feels different. Some play safe. Some bluff. Some wait for the perfect knock.</p>
+        </section>
+
+        <section class="section">
+            <h2>Performance Tracking</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Lifetime Stats</h3>
+                    <p>Track overall performance, win rate, streaks, and long-term progress.</p>
+                </div>
+                <div class="feature">
+                    <h3>Per-Opponent Records</h3>
+                    <p>See how you perform against each opponent and adapt your strategy.</p>
+                </div>
+                <div class="feature">
+                    <h3>Recent Match History</h3>
+                    <p>Review detailed recent matches to understand what changed and improve your next game.</p>
+                </div>
             </div>
-            <div class="testimonial">
-                <div class="testimonial-text">"So satisfying! Snap Jigsaw is pure puzzle joy—gorgeous pics, snappy pieces, and smooth gameplay."</div>
-                <div class="testimonial-author">- quixote5, App Store Review</div>
-            </div>
+        </section>
+
+        <section class="premium section">
+            <h2>Premium Upgrade (One-Time Purchase)</h2>
+            <ul class="premium-list">
+                <li>Additional scoring modes: First to 200 and 300</li>
+                <li>Premium opponents</li>
+                <li>Full statistics access</li>
+                <li>More card backs and table themes</li>
+                <li>Undo support in AI matches</li>
+            </ul>
         </section>
 
         <div class="cta-section">
-            <h2>Ready to Start Puzzling?</h2>
-            <p>Download Snap Jigsaw and start creating beautiful puzzles today!</p>
-            <a href="https://apps.apple.com/app/apple-store/id6744262536?pt=250600&ct=website_snapjigsaw&mt=8">
+            <h2>From First Draw to Final Knock</h2>
+            <p>No coins. No casino noise. Just classic Gin Rummy, elevated.</p>
+            <a href="https://apps.apple.com/us/app/gin-rummy-cardcraft/id6759302684">
                 <img class="download-badge" src="../images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png" alt="Download on the App Store">
             </a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 SoftwareByEugene LLC. All rights reserved.</p>
-        <p><a href="privacy.html" style="color: #667eea;">Privacy Policy</a></p>
+        <p>&copy; 2026 SoftwareByEugene LLC. All rights reserved.</p>
+        <p><a href="privacy.html" style="color: #9ac0ff;">Privacy Policy</a></p>
     </footer>
 
     <!-- JSON-LD Structured Data -->
@@ -449,8 +469,8 @@
     {
         "@context": "https://schema.org",
         "@type": "MobileApplication",
-        "name": "Snap Jigsaw",
-        "description": "Transform any photo into a beautiful jigsaw puzzle with 3.1M+ images to choose from",
+        "name": "Gin Rummy - Cardcraft",
+        "description": "A modern Gin Rummy card game with offline AI personalities, nearby multiplayer, and deep performance tracking.",
         "operatingSystem": "iOS",
         "applicationCategory": "GameApplication",
         "offers": {
@@ -458,8 +478,9 @@
             "price": "0",
             "priceCurrency": "USD"
         },
-        "downloadUrl": "https://apps.apple.com/us/app/snap-jigsaw-real-art-puzzles/id6744262536",
-        "screenshot": "https://softwarebyeugene.com/snapjigsaw/icon.png"
+        "softwareVersion": "1.0.4",
+        "downloadUrl": "https://apps.apple.com/us/app/gin-rummy-cardcraft/id6759302684",
+        "screenshot": "https://softwarebyeugene.com/ginrummy/icon.jpg"
     }
     </script>
 
@@ -468,16 +489,13 @@
         document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.querySelector('.hamburger');
             const navLinks = document.querySelector('.nav-links');
-            
+
             hamburger.addEventListener('click', function() {
                 hamburger.classList.toggle('active');
                 navLinks.classList.toggle('active');
-                
-                // Prevent body scroll when menu is open
                 document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
             });
 
-            // Close menu when clicking a link
             navLinks.addEventListener('click', function(e) {
                 if (e.target.tagName === 'A') {
                     hamburger.classList.remove('active');
@@ -486,7 +504,6 @@
                 }
             });
 
-            // Close menu when clicking outside
             document.addEventListener('click', function(e) {
                 if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
                     hamburger.classList.remove('active');
@@ -503,19 +520,18 @@
             const appStoreLinks = document.querySelectorAll('a[href*="apps.apple.com"]');
             appStoreLinks.forEach(function(link, index) {
                 link.addEventListener('click', function() {
-                    // Determine button location for more detailed tracking
                     const isHeroButton = link.closest('.download-hero') !== null;
                     const isCtaButton = link.closest('.cta-section') !== null;
                     const buttonLocation = isHeroButton ? 'hero' : (isCtaButton ? 'cta' : 'other');
-                    
+
                     if (typeof gtag !== 'undefined') {
                         gtag('event', 'app_store_click', {
-                            'app_name': 'Snap Jigsaw',
-                            'page': 'snapjigsaw_landing',
-                            'campaign_token': 'website_snapjigsaw',
+                            'app_name': 'Gin Rummy - Cardcraft',
+                            'page': 'ginrummy_landing',
+                            'campaign_token': 'no_campaign',
                             'button_location': buttonLocation,
                             'position': index + 1,
-                            'has_campaign_tracking': true
+                            'has_campaign_tracking': false
                         });
                     }
                 });
