@@ -91,6 +91,11 @@
             padding: 0;
         }
 
+        .nav-links li {
+            display: flex;
+            align-items: center;
+        }
+
         .nav-links a {
             color: #fff;
             margin: 0 15px;
@@ -101,6 +106,39 @@
 
         .nav-links a:hover {
             color: #007AFF;
+        }
+
+        .nav-social-links {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin-left: 3px;
+        }
+
+        .nav-icon-link {
+            width: 44px;
+            height: 44px;
+            margin: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(255, 255, 255, 0.06);
+            transition: color 0.3s, background-color 0.3s, border-color 0.3s, transform 0.3s;
+        }
+
+        .nav-icon-link:hover {
+            color: #007AFF;
+            background: rgba(0, 122, 255, 0.14);
+            border-color: rgba(0, 122, 255, 0.55);
+            transform: translateY(-1px);
+        }
+
+        .nav-icon-link svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
         }
 
         .hamburger {
@@ -219,11 +257,17 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
             position: relative;
+            cursor: pointer;
         }
 
         .app:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .app:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 4px;
         }
 
         .app img.app-icon {
@@ -337,6 +381,22 @@
                 touch-action: manipulation;
             }
 
+            .nav-social-links {
+                margin-left: 0;
+                gap: 0;
+            }
+
+            .nav-icon-link {
+                width: 56px;
+                height: 56px;
+                padding: 0;
+            }
+
+            .nav-links .nav-icon-link {
+                margin: 0;
+                font-size: 1rem;
+            }
+
             .indie-sections {
                 padding: 2rem 1rem 1.25rem 1rem;
             }
@@ -398,7 +458,18 @@
         <ul class="nav-links">
             <li><a href="#top">Home</a></li>
             <li><a href="#apps">Apps</a></li>
-            <li><a href="mailto:support@softwarebyeugene.com">Contact</a></li>
+            <li class="nav-social-links">
+                <a href="mailto:support@softwarebyeugene.com" class="nav-icon-link" aria-label="Email Eugene" title="Email Eugene">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 5.75A2.75 2.75 0 0 1 5.75 3h12.5A2.75 2.75 0 0 1 21 5.75v12.5A2.75 2.75 0 0 1 18.25 21H5.75A2.75 2.75 0 0 1 3 18.25V5.75Zm2.2-.25 6.8 5.55 6.8-5.55H5.2Zm14.3 1.93-7.03 5.73a.75.75 0 0 1-.94 0L4.5 7.43v10.82c0 .41.34.75.75.75h13.5c.41 0 .75-.34.75-.75V7.43Z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/eugeneismyname/" class="nav-icon-link" aria-label="Eugene on LinkedIn" title="Eugene on LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6.94 8.5A1.56 1.56 0 1 0 6.94 5.38a1.56 1.56 0 0 0 0 3.12ZM5.56 10h2.77v8.44H5.56V10Zm4.5 0h2.66v1.15h.04c.37-.7 1.28-1.43 2.63-1.43 2.81 0 3.33 1.85 3.33 4.26v4.46h-2.77v-3.95c0-.94-.02-2.15-1.31-2.15-1.31 0-1.52 1.02-1.52 2.08v4.02h-2.77V10Z"/>
+                    </svg>
+                </a>
+            </li>
         </ul>
         <div class="hamburger">
             <span></span>
@@ -428,12 +499,10 @@
     </section>
     
     <section id="apps" class="apps">
-        <div class="app">
+        <div class="app" data-app-url="https://apps.apple.com/app/apple-store/id6744262536?pt=250600&ct=website_homepage&mt=8" role="link" tabindex="0" aria-label="Open Snap Jigsaw in the App Store">
             <div class="featured-badge">🔥 MOST POPULAR</div>
-            <a href="snapjigsaw/index.html" style="text-decoration: none; color: inherit;">
-                <img src="snapjigsaw/icon.png" alt="Snap Jigsaw" class="app-icon">
-                <h3>Snap Jigsaw</h3>
-            </a>
+            <img src="snapjigsaw/icon.png" alt="Snap Jigsaw" class="app-icon">
+            <h3>Snap Jigsaw</h3>
             <div class="app-rating">Photo Puzzle Studio</div>
             <div class="app-stats">3.1M+ Photo Puzzles</div>
             <p>Play 3.1 million real art puzzles for free. Create puzzles from your photos. Challenge friends for time with the same scramble. Compete for a top spot on Game Center leaderboards.</p>
@@ -444,11 +513,9 @@
                 </a>
             </div>
         </div>
-        <div class="app">
-            <a href="clevercontacts/index.html" style="text-decoration: none; color: inherit;">
-                <img src="clevercontacts/icon.png" alt="Clever Contacts" class="app-icon">
-                <h3>Clever Contacts</h3>
-            </a>
+        <div class="app" data-app-url="https://apps.apple.com/us/app/clever-contacts/id6670188409" role="link" tabindex="0" aria-label="Open Clever Contacts in the App Store">
+            <img src="clevercontacts/icon.png" alt="Clever Contacts" class="app-icon">
+            <h3>Clever Contacts</h3>
             <div class="app-rating">AI Contact Assistant</div>
             <div class="app-stats">AI-Powered Contact Management</div>
             <p>A better contacts app for iPhone. Ask about your contacts in plain English ("What does Jimmy's dad do?"). Update contacts in plain English ("Alex Yarn lives at 123 Maple Lane").</p>
@@ -460,11 +527,9 @@
                 </a>
             </div>
         </div>
-        <div class="app">
-            <a href="mapcred/index.html" style="text-decoration: none; color: inherit;">
-                <img src="mapcred/mapcred-icon.png" alt="MapCred" class="app-icon">
-                <h3>MapCred</h3>
-            </a>
+        <div class="app" data-app-url="https://apps.apple.com/us/app/mapcred/id6444250747" role="link" tabindex="0" aria-label="Open MapCred in the App Store">
+            <img src="mapcred/mapcred-icon.png" alt="MapCred" class="app-icon">
+            <h3>MapCred</h3>
             <div class="app-rating">Location Storytelling</div>
             <div class="app-stats">Travel Tracking & Mini-Games</div>
             <p>Get a personal heatmap of where you spent your time, automatically and privately! Includes mini-games and Game Center leaderboards to see who's most traveled.</p>
@@ -476,11 +541,9 @@
                 </a>
             </div>
         </div>
-        <div class="app">
-            <a href="cardswithphones/index.html" style="text-decoration: none; color: inherit;">
-                <img src="cardswithphones/icon.png" alt="Cards with Phones" class="app-icon">
-                <h3>Cards with Phones</h3>
-            </a>
+        <div class="app" data-app-url="https://apps.apple.com/us/app/cards-with-phones/id1454757579" role="link" tabindex="0" aria-label="Open Cards with Phones in the App Store">
+            <img src="cardswithphones/icon.png" alt="Cards with Phones" class="app-icon">
+            <h3>Cards with Phones</h3>
             <div class="app-rating">Classic Card Games</div>
             <div class="app-stats">Local Multiplayer Gaming</div>
             <p>Play 7 classic card games with friends using local Bluetooth/WiFi. Support for up to 8 players with robot opponents and automatic scorekeeping.</p>
@@ -492,11 +555,9 @@
                 </a>
             </div>
         </div>
-        <div class="app">
-            <a href="ginrummy/index.html" style="text-decoration: none; color: inherit;">
-                <img src="ginrummy/icon.jpg" alt="Gin Rummy - Cardcraft" class="app-icon">
-                <h3>Gin Rummy - Cardcraft</h3>
-            </a>
+        <div class="app" data-app-url="https://apps.apple.com/us/app/gin-rummy-cardcraft/id6759302684" role="link" tabindex="0" aria-label="Open Gin Rummy - Cardcraft in the App Store">
+            <img src="ginrummy/icon.jpg" alt="Gin Rummy - Cardcraft" class="app-icon">
+            <h3>Gin Rummy - Cardcraft</h3>
             <div class="app-rating">Serious Cards. Serious Opponents.</div>
             <div class="app-stats">Offline AI • Nearby 2-Player</div>
             <p>A modern Gin Rummy experience with distinct AI personalities, nearby multiplayer, smooth drag-to-play controls, and deep performance stats. No ads. No subscriptions. Free to play.</p>
@@ -572,7 +633,7 @@
 
             // Close menu when clicking a link
             navLinks.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
+                if (e.target.closest('a')) {
                     hamburger.classList.remove('active');
                     navLinks.classList.remove('active');
                     document.body.style.overflow = '';
@@ -594,31 +655,51 @@
     <script>
         // Track app store clicks for conversion measurement
         document.addEventListener('DOMContentLoaded', function() {
+            const appCards = document.querySelectorAll('.app[data-app-url]');
             const appStoreLinks = document.querySelectorAll('a[href*="apps.apple.com"]');
+            const navigateToAppStore = function(url, appElement, position) {
+                const appName = appElement ? appElement.querySelector('h3').textContent : 'Unknown';
+                const linkUrl = new URL(url);
+                const campaignToken = linkUrl.searchParams.get('ct') || 'no_campaign';
+
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'app_store_click', {
+                        'app_name': appName,
+                        'page': 'homepage',
+                        'campaign_token': campaignToken,
+                        'position': position,
+                        'has_campaign_tracking': campaignToken !== 'no_campaign'
+                    });
+                }
+
+                setTimeout(function() {
+                    window.location.href = url;
+                }, 100);
+            };
+
             appStoreLinks.forEach(function(link, index) {
-                link.addEventListener('click', function() {
-                    // Get app name and determine source details
-                    const appElement = link.closest('.app');
-                    const appName = appElement ? appElement.querySelector('h3').textContent : 'Unknown';
-                    const linkUrl = new URL(link.href);
-                    const campaignToken = linkUrl.searchParams.get('ct') || 'no_campaign';
-                    
-                    // Track conversion event with enhanced details
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'app_store_click', {
-                            'app_name': appName,
-                            'page': 'homepage',
-                            'campaign_token': campaignToken,
-                            'position': index + 1,
-                            'has_campaign_tracking': campaignToken !== 'no_campaign'
-                        });
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navigateToAppStore(link.href, link.closest('.app'), index + 1);
+                });
+            });
+
+            appCards.forEach(function(card, index) {
+                card.addEventListener('click', function(e) {
+                    if (e.target.closest('a')) {
+                        return;
                     }
-                    
-                    // Add slight delay to ensure tracking
-                    setTimeout(function() {
-                        window.open(link.href, '_blank');
-                    }, 100);
-                    return false;
+
+                    navigateToAppStore(card.dataset.appUrl, card, index + 1);
+                });
+
+                card.addEventListener('keydown', function(e) {
+                    if (e.key !== 'Enter' && e.key !== ' ') {
+                        return;
+                    }
+
+                    e.preventDefault();
+                    navigateToAppStore(card.dataset.appUrl, card, index + 1);
                 });
             });
         });
