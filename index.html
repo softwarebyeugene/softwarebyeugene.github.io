@@ -239,12 +239,40 @@
             line-height: 1.4;
         }
 
+        .app-sections {
+            padding: 20px;
+            background: #111;
+        }
+
+        .app-category {
+            max-width: 1140px;
+            margin: 0 auto 34px auto;
+        }
+
+        .app-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .app-category-heading {
+            text-align: center;
+            margin: 10px auto 8px auto;
+            font-size: 2em;
+            color: #fff;
+        }
+
+        .app-category-subtitle {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 18px auto;
+            color: #bdbdbd;
+            line-height: 1.5;
+        }
+
         .apps {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-            background: #111;
+            justify-content: center;
+            padding: 0;
         }
 
         .app {
@@ -412,10 +440,13 @@
                 margin: 0 auto 14px auto;
             }
             
+            .app-sections {
+                padding: 2rem 1rem;
+            }
+
             .apps {
                 flex-direction: column;
                 align-items: center;
-                padding: 2rem 1rem;
             }
             
             .app {
@@ -498,16 +529,20 @@
         </div>
     </section>
     
-    <section id="apps" class="apps">
-        <div class="app" data-app-url="https://apps.apple.com/app/apple-store/id6744262536?pt=250600&ct=website_homepage&mt=8" role="link" tabindex="0" aria-label="Open Snap Jigsaw in the App Store">
-            <div class="featured-badge">🔥 MOST POPULAR</div>
-            <img src="snapjigsaw/icon.png" alt="Snap Jigsaw" class="app-icon">
-            <h3>Snap Jigsaw</h3>
-            <div class="app-rating">Photo Puzzle Studio</div>
-            <div class="app-stats">3.1M+ Photo Puzzles</div>
-            <p>Play 3.1 million real art puzzles for free. Create puzzles from your photos. Challenge friends for time with the same scramble. Compete for a top spot on Game Center leaderboards.</p>
+    <section id="apps" class="app-sections">
+        <div class="app-category">
+            <h2 class="app-category-heading">Utilities</h2>
+            <p class="app-category-subtitle">Focused tools for photos, contacts, and everyday life — built to be simple, private, and useful.</p>
+            <div class="apps">
+        <div class="app" data-app-url="https://apps.apple.com/us/app/frame-tv-photo-resizer/id6760306325" role="link" tabindex="0" aria-label="Open Frame TV Photo Resizer in the App Store">
+            <div class="featured-badge">✨ NEW</div>
+            <img src="frameresizer/icon.png" alt="Frame TV Photo Resizer" class="app-icon">
+            <h3>Frame TV Photo Resizer</h3>
+            <div class="app-rating">Photo & Video Utility</div>
+            <div class="app-stats">Made for Samsung Frame TV Art Mode</div>
+            <p>Resize, crop, and position photos so they look sharp and perfectly framed on your Samsung Frame TV. Save ready-to-display images directly to Photos.</p>
             <div class="download-container">
-                <a href="https://apps.apple.com/app/apple-store/id6744262536?pt=250600&ct=website_homepage&mt=8">
+                <a href="https://apps.apple.com/us/app/frame-tv-photo-resizer/id6760306325">
                     <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
                         alt="Download on the App Store">
                 </a>
@@ -541,6 +576,26 @@
                 </a>
             </div>
         </div>
+            </div>
+        </div>
+        <div class="app-category">
+            <h2 class="app-category-heading">Games</h2>
+            <p class="app-category-subtitle">Casual games and card-table classics for puzzles, friends, and offline play.</p>
+            <div class="apps">
+        <div class="app" data-app-url="https://apps.apple.com/app/apple-store/id6744262536?pt=250600&ct=website_homepage&mt=8" role="link" tabindex="0" aria-label="Open Snap Jigsaw in the App Store">
+            <div class="featured-badge">🔥 MOST POPULAR</div>
+            <img src="snapjigsaw/icon.png" alt="Snap Jigsaw" class="app-icon">
+            <h3>Snap Jigsaw</h3>
+            <div class="app-rating">Photo Puzzle Studio</div>
+            <div class="app-stats">3.1M+ Photo Puzzles</div>
+            <p>Play 3.1 million real art puzzles for free. Create puzzles from your photos. Challenge friends for time with the same scramble. Compete for a top spot on Game Center leaderboards.</p>
+            <div class="download-container">
+                <a href="https://apps.apple.com/app/apple-store/id6744262536?pt=250600&ct=website_homepage&mt=8">
+                    <img class="download-badge" src="images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png"
+                        alt="Download on the App Store">
+                </a>
+            </div>
+        </div>
         <div class="app" data-app-url="https://apps.apple.com/us/app/cards-with-phones/id1454757579" role="link" tabindex="0" aria-label="Open Cards with Phones in the App Store">
             <img src="cardswithphones/icon.png" alt="Cards with Phones" class="app-icon">
             <h3>Cards with Phones</h3>
@@ -568,6 +623,8 @@
                 </a>
             </div>
         </div>
+            </div>
+        </div>
     </section>
     <footer>
         <p>&copy; 2025 SoftwareByEugene LLC. All rights reserved.</p>
@@ -589,6 +646,18 @@
                 "name": "Snap Jigsaw",
                 "operatingSystem": "iOS",
                 "applicationCategory": "GameApplication",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            },
+            {
+                "@type": "MobileApplication",
+                "name": "Frame TV Photo Resizer",
+                "operatingSystem": "iOS",
+                "applicationCategory": "UtilitiesApplication",
+                "url": "https://apps.apple.com/us/app/frame-tv-photo-resizer/id6760306325",
                 "offers": {
                     "@type": "Offer",
                     "price": "0",
