@@ -5,6 +5,15 @@
       {
         "appID": "DVFZGL7K36.com.softwarebyeugene.Jigsaw",
         "paths": [ "/snapjigsaw/puzzle/*" ]
+      },
+      {
+        "appID": "DVFZGL7K36.com.softwarebyeugene.tourguide",
+        "components": [
+          {
+            "/": "/hearhere-guide/place/",
+            "comment": "Open a shared HearHere Guide place"
+          }
+        ]
       }
     ]
   }

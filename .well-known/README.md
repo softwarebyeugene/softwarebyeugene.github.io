@@ -1,6 +1,9 @@
 # Notes on apple-app-site-association
 
-This folder contains the `apple-app-site-association` file required for iOS Universal Links to work with the Jigsaw app (`DVFZGL7K36.com.softwarebyeugene.Jigsaw`).
+This folder contains the `apple-app-site-association` file required for iOS Universal Links to work with:
+
+- Jigsaw (`DVFZGL7K36.com.softwarebyeugene.Jigsaw`)
+- HearHere Guide shared places (`DVFZGL7K36.com.softwarebyeugene.tourguide`)
 
 ## ⚠️ Important: MIME Type Fix via Cloudflare
 
