@@ -4,43 +4,113 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ConditionProof — Rental Condition Reports</title>
-  <meta name="description" content="Create private, organized move-in and move-out evidence with guided room photos, factual notes, and verifiable exports.">
+  <meta name="description" content="Create organized move-in and move-out records with guided room checklists, private on-device evidence, gap review, and complete exports.">
+  <link rel="icon" href="icon.png">
   <link rel="canonical" href="https://softwarebyeugene.com/conditionproof/">
   <meta property="og:title" content="ConditionProof — Rental Condition Reports">
-  <meta property="og:description" content="Protect your security deposit with private, guided move-in and move-out evidence.">
+  <meta property="og:description" content="Protect your deposit with a clearer record. Your property photos stay on your iPhone.">
+  <meta property="og:image" content="https://softwarebyeugene.com/conditionproof/icon.png">
   <meta property="og:url" content="https://softwarebyeugene.com/conditionproof/">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
   <style>
+    :root{color-scheme:dark;--navy:#0e2438;--navy2:#15324a;--ink:#f8fbfd;--muted:#cbd8e2;--orange:#ff9f32;--line:rgba(255,255,255,.14)}
     *{box-sizing:border-box}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0e2238;color:#fff;line-height:1.55}
-    main{width:100%;max-width:860px;margin:0 auto;padding:72px 24px}
-    .eyebrow{display:inline-block;padding:7px 13px;border-radius:999px;background:#f8952e;color:#11253d;font-size:12px;font-weight:800;letter-spacing:.12em}
-    h1{font-size:clamp(46px,9vw,82px);line-height:.95;margin:22px 0}
-    .lead{font-size:clamp(20px,3vw,27px);color:#d6e0e9;max-width:720px}
-    .card{margin-top:42px;padding:28px;border:1px solid rgba(255,255,255,.16);border-radius:26px;background:rgba(255,255,255,.07)}
-    ul{padding-left:22px;color:#eef3f7;font-size:18px}
-    li{margin:.65rem 0}
-    a{color:#ffb667}
-    .links{margin-top:32px}
-    .back{display:inline-block;margin-top:42px;color:#c8d5df}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--navy);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+    main{overflow:hidden}
+    .hero{max-width:1160px;margin:0 auto;padding:72px 28px 62px;display:grid;grid-template-columns:minmax(0,1fr) minmax(390px,.82fr);gap:58px;align-items:center}
+    .app-icon{width:116px;height:116px;border-radius:26px;box-shadow:0 18px 42px rgba(0,0,0,.34)}
+    .eyebrow{margin-top:22px;color:var(--orange);text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:800}
+    h1{font-size:clamp(48px,6.8vw,82px);line-height:.96;letter-spacing:-.05em;margin:16px 0 22px}
+    .lead{font-size:clamp(20px,2.2vw,28px);max-width:650px;color:var(--muted);margin:0}
+    .store-link{display:inline-block;margin-top:26px}
+    .store-badge{display:block;width:174px;height:auto}
+    .hero-art{position:relative;min-height:530px;display:flex;align-items:center;justify-content:center}
+    .hero-art::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#38647e 0,#1f455f 48%,#102b41 100%)}
+    .hero-shot{position:relative;width:268px;border-radius:34px;box-shadow:0 28px 70px rgba(0,0,0,.43);transform:rotate(2deg)}
+    .highlights{max-width:1000px;margin:0 auto;padding:8px 28px 74px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .highlight{padding:25px 23px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.055)}
+    .highlight strong{display:block;font-size:21px;color:#fff;margin-bottom:5px}
+    .highlight span{color:var(--muted)}
+    .proof-section{background:#f6f6f1;padding:72px 24px 82px;color:#11283c}
+    .section-copy{max-width:720px;margin:0 auto 38px;text-align:center}
+    .section-copy h2{font-size:clamp(36px,5vw,56px);line-height:1.02;letter-spacing:-.04em;margin:0 0 14px}
+    .section-copy p{font-size:19px;color:#536777;margin:0}
+    .screens{max-width:980px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+    .screen{width:100%;border-radius:30px;box-shadow:0 22px 45px rgba(11,30,45,.23)}
+    .details{max-width:900px;margin:0 auto;padding:74px 28px}
+    .details h2{font-size:38px;letter-spacing:-.035em;margin:0 0 18px}
+    .details ul{padding-left:22px;font-size:18px;color:#e0e9ef}
+    .details li{margin:.72rem 0}
+    .note{margin-top:28px;padding:18px 20px;border-left:4px solid var(--orange);background:rgba(255,255,255,.055);color:var(--muted)}
+    .links{margin-top:32px;color:var(--muted)}
+    a{color:#ffbd72}
+    .back{display:inline-block;margin-top:32px;color:var(--muted)}
+    @media(max-width:780px){
+      .hero{grid-template-columns:1fr;gap:22px;padding:46px 21px 46px;text-align:center}
+      .app-icon{width:96px;height:96px;border-radius:22px}
+      .lead{margin:0 auto}
+      .hero-art{min-height:400px}
+      .hero-art::before{width:370px;height:370px}
+      .hero-shot{width:210px;border-radius:26px}
+      .highlights{grid-template-columns:1fr;padding:0 20px 54px}
+      .screens{gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 max(20px,calc((100vw - 280px)/2)) 18px}
+      .screen{min-width:260px;scroll-snap-align:center;border-radius:26px}
+      .proof-section{padding:55px 0 62px}
+      .section-copy{padding:0 22px}
+      .details{padding:56px 22px}
+    }
   </style>
 </head>
 <body>
 <main>
-  <div class="eyebrow">PRIVATE RENTAL EVIDENCE</div>
-  <h1>Photograph it.<br>Document it.</h1>
-  <p class="lead">ConditionProof guides renters and property owners through a complete move-in or move-out record—without requiring an account or uploading private property photos.</p>
-  <div class="card">
+  <section class="hero">
+    <div>
+      <img src="icon.png" alt="ConditionProof app icon" class="app-icon">
+      <div class="eyebrow">Rental condition reports</div>
+      <h1>Protect your deposit with a clearer record.</h1>
+      <p class="lead">Build an organized move-in or move-out record with guided room checklists and private evidence that stays on your iPhone.</p>
+      <a class="store-link" href="https://apps.apple.com/us/app/conditionproof-rental-reports/id6794506405" aria-label="Download ConditionProof on the App Store">
+        <img class="store-badge" src="../images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png" alt="Download on the App Store">
+      </a>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <img src="screenshot-review.jpg" alt="" class="hero-shot">
+    </div>
+  </section>
+
+  <section class="highlights" aria-label="ConditionProof highlights">
+    <div class="highlight"><strong>Guided room checklists</strong><span>Know which views to capture as you move through each room.</span></div>
+    <div class="highlight"><strong>Private on-device evidence</strong><span>No account required and no property-photo upload to us.</span></div>
+    <div class="highlight"><strong>Review every gap</strong><span>See missing views before you finish without losing control.</span></div>
+  </section>
+
+  <section class="proof-section">
+    <div class="section-copy">
+      <h2>A complete record, step by step</h2>
+      <p>Start the report, follow the practical checklist, and review the evidence before exporting.</p>
+    </div>
+    <div class="screens">
+      <img src="screenshot-reports.jpg" alt="ConditionProof report list showing private on-device evidence" class="screen" loading="lazy">
+      <img src="screenshot-checklist.jpg" alt="Guided move-in room checklist with progress and missing views" class="screen" loading="lazy">
+      <img src="screenshot-review.jpg" alt="Evidence review showing complete rooms and remaining gaps" class="screen" loading="lazy">
+    </div>
+  </section>
+
+  <section class="details">
+    <h2>Evidence you control</h2>
     <ul>
-      <li>Room-by-room photo checklist</li>
       <li>Typed or dictated factual observations</li>
       <li>Evidence-gap review before finishing</li>
-      <li>Complete watermarked preview before purchase</li>
-      <li>PDF, original-photo archive, and SHA-256 integrity manifest</li>
+      <li>Complete watermarked report preview before purchase</li>
+      <li>PDF report, original-photo archive, and SHA-256 file-integrity manifest exports</li>
+      <li>Optional photo-location evidence</li>
     </ul>
-  </div>
-  <p class="links"><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a></p>
-  <a class="back" href="/">← SoftwareByEugene</a>
+    <p class="note">ConditionProof helps organize your record. It does not guarantee the outcome of a dispute or replace legal advice.</p>
+    <p class="links"><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a></p>
+    <a class="back" href="/">← SoftwareByEugene</a>
+  </section>
 </main>
 </body>
 </html>

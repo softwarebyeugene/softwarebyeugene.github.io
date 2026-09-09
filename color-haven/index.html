@@ -4,39 +4,110 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Color Haven — Relaxing Paint by Number</title>
-  <meta name="description" content="Slow down with 200 hand-picked color-by-number scenes, gentle comfort controls, and private on-device progress.">
+  <meta name="description" content="Slow down with 204 relaxing paint-by-number scenes, six free paintings, no ads, and no subscriptions.">
+  <link rel="icon" href="icon.png">
   <link rel="canonical" href="https://softwarebyeugene.com/color-haven/">
   <meta property="og:title" content="Color Haven — Relaxing Paint by Number">
-  <meta property="og:description" content="A calm, private color-by-number collection with no ads, accounts, or subscriptions.">
+  <meta property="og:description" content="Slow down. Color awhile. Explore 204 paintings with no ads or subscriptions.">
+  <meta property="og:image" content="https://softwarebyeugene.com/color-haven/icon.png">
   <meta property="og:url" content="https://softwarebyeugene.com/color-haven/">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
   <style>
+    :root{color-scheme:light;--ink:#203c34;--muted:#5b6f68;--cream:#fbf6ea;--paper:#fffdf7;--gold:#edbd68;--rust:#9d5432;--line:#ddd1bd}
     *{box-sizing:border-box}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f8f2e7;color:#243c36;line-height:1.55}
-    main{width:100%;max-width:860px;margin:0 auto;padding:72px 24px}
-    .eyebrow{display:inline-block;padding:7px 13px;border-radius:999px;background:#f1c36b;color:#243c36;font-size:12px;font-weight:800;letter-spacing:.12em}
-    h1{font-size:clamp(48px,9vw,84px);line-height:.95;margin:22px 0;color:#355f55}
-    .lead{font-size:clamp(20px,3vw,27px);color:#526a63;max-width:720px}
-    .card{margin-top:42px;padding:28px;border:1px solid #d8cdb9;border-radius:26px;background:rgba(255,255,255,.64)}
-    ul{padding-left:22px;font-size:18px} li{margin:.65rem 0} a{color:#8a4e2b}
-    .links{margin-top:32px}.back{display:inline-block;margin-top:42px;color:#526a63}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+    main{overflow:hidden}
+    .hero{max-width:1160px;margin:0 auto;padding:72px 28px 58px;display:grid;grid-template-columns:minmax(0,1fr) minmax(390px,.82fr);gap:60px;align-items:center}
+    .app-icon{width:116px;height:116px;border-radius:26px;box-shadow:0 18px 42px rgba(61,64,43,.18)}
+    .eyebrow{margin-top:22px;color:#597269;text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:800}
+    h1{font-size:clamp(52px,7vw,86px);line-height:.94;letter-spacing:-.055em;margin:16px 0 22px;color:#315b50}
+    .lead{font-size:clamp(20px,2.2vw,28px);max-width:650px;color:var(--muted);margin:0}
+    .store-link{display:inline-block;margin-top:26px}
+    .store-badge{display:block;width:174px;height:auto}
+    .hero-art{position:relative;min-height:530px;display:flex;align-items:center;justify-content:center}
+    .hero-art::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle at 45% 40%,#f1cf91 0,#e9ad83 45%,#ad7463 100%);opacity:.8;filter:saturate(.9)}
+    .hero-shot{position:relative;width:268px;border-radius:34px;box-shadow:0 28px 70px rgba(61,45,35,.27);transform:rotate(2deg)}
+    .highlights{max-width:1000px;margin:0 auto;padding:8px 28px 74px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .highlight{padding:25px 23px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.52)}
+    .highlight strong{display:block;font-size:22px;color:#315b50;margin-bottom:5px}
+    .highlight span{color:var(--muted)}
+    .gallery-section{background:#294b43;padding:72px 24px 82px;color:#fff}
+    .section-copy{max-width:720px;margin:0 auto 38px;text-align:center}
+    .section-copy h2{font-size:clamp(36px,5vw,56px);line-height:1.02;letter-spacing:-.04em;margin:0 0 14px}
+    .section-copy p{font-size:19px;color:#d9e5df;margin:0}
+    .screens{max-width:980px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+    .screen{width:100%;border-radius:30px;box-shadow:0 22px 45px rgba(5,20,15,.28)}
+    .details{max-width:900px;margin:0 auto;padding:74px 28px}
+    .details h2{font-size:38px;letter-spacing:-.035em;margin:0 0 18px;color:#315b50}
+    .details ul{padding-left:22px;font-size:18px;color:#415c54}
+    .details li{margin:.72rem 0}
+    .links{margin-top:32px;color:var(--muted)}
+    a{color:var(--rust)}
+    .back{display:inline-block;margin-top:32px;color:var(--muted)}
+    @media(max-width:780px){
+      .hero{grid-template-columns:1fr;gap:22px;padding:46px 21px 46px;text-align:center}
+      .app-icon{width:96px;height:96px;border-radius:22px}
+      .lead{margin:0 auto}
+      .hero-art{min-height:400px}
+      .hero-art::before{width:370px;height:370px}
+      .hero-shot{width:210px;border-radius:26px}
+      .highlights{grid-template-columns:1fr;padding:0 20px 54px}
+      .screens{gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 max(20px,calc((100vw - 280px)/2)) 18px}
+      .screen{min-width:260px;scroll-snap-align:center;border-radius:26px}
+      .gallery-section{padding:55px 0 62px}
+      .section-copy{padding:0 22px}
+      .details{padding:56px 22px}
+    }
   </style>
 </head>
 <body>
 <main>
-  <div class="eyebrow">A QUIET PLACE TO CREATE</div>
-  <h1>Slow down.<br>Color awhile.</h1>
-  <p class="lead">Color Haven is a gentle color-by-number collection with 200 hand-picked scenes, flexible guidance, and progress that stays on your device.</p>
-  <div class="card">
+  <section class="hero">
+    <div>
+      <img src="icon.png" alt="Color Haven app icon" class="app-icon">
+      <div class="eyebrow">Relaxing paint by number</div>
+      <h1>Slow down.<br>Color awhile.</h1>
+      <p class="lead">Settle into 204 hand-picked paintings, flexible ways to color, and progress that stays private on your device.</p>
+      <a class="store-link" href="https://apps.apple.com/us/app/color-haven-calm-coloring/id6794542103" aria-label="Download Color Haven on the App Store">
+        <img class="store-badge" src="../images/Download_on_the_App_Store_Badge_US-UK_blk_092917.png" alt="Download on the App Store">
+      </a>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <img src="screenshot-completion.jpg" alt="" class="hero-shot">
+    </div>
+  </section>
+
+  <section class="highlights" aria-label="Color Haven highlights">
+    <div class="highlight"><strong>204 paintings</strong><span>A broad collection from simple scenes to intricate artwork.</span></div>
+    <div class="highlight"><strong>Six free</strong><span>Complete paintings to enjoy before choosing a lifetime unlock.</span></div>
+    <div class="highlight"><strong>No ads. No subscriptions.</strong><span>One optional lifetime purchase opens the full gallery.</span></div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="section-copy">
+      <h2>Your quiet place to create</h2>
+      <p>Browse the gallery, color at your own pace, and enjoy the finished piece.</p>
+    </div>
+    <div class="screens">
+      <img src="screenshot-gallery.jpg" alt="Color Haven gallery with free and premium paintings" class="screen" loading="lazy">
+      <img src="screenshot-coloring.jpg" alt="A cottage paint-by-number canvas in progress" class="screen" loading="lazy">
+      <img src="screenshot-completion.jpg" alt="A completed cottage painting saved to the gallery" class="screen" loading="lazy">
+    </div>
+  </section>
+
+  <section class="details">
+    <h2>Color your way</h2>
     <ul>
       <li>Guided color-by-number, any-color, and free-color modes</li>
       <li>Comfort controls, optional session reminders, and accessible navigation</li>
-      <li>Six complete paintings free, with one optional lifetime gallery unlock</li>
-      <li>No ads, accounts, tracking, cloud upload, or subscriptions</li>
+      <li>No accounts, tracking, cloud uploads, ads, or subscriptions</li>
+      <li>Painting progress and preferences stay on your device</li>
     </ul>
-  </div>
-  <p class="links"><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a></p>
-  <a class="back" href="/">← SoftwareByEugene</a>
+    <p class="links"><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a></p>
+    <a class="back" href="/">← SoftwareByEugene</a>
+  </section>
 </main>
 </body>
 </html>
